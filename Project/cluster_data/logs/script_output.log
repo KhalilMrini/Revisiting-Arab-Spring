@@ -1,0 +1,7 @@
+
+DF:
+Traceback (most recent call last):
+  File "/home/moraes/read_json.py", line 18, in <module>
+    df.show(100)
+  File "/usr/hdp/current/spark-client/python/lib/pyspark.zip/pyspark/sql/dataframe.py", line 257, in show
+UnicodeEncodeError: 'ascii' codec can't encode character u'\xf6' in position 1328: ordinal not in range(128)

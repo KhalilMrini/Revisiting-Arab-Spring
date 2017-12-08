@@ -2,3 +2,7 @@
 Project/.ipynb_checkpoints/
 Project/01-14-SOCIAL_MEDIA.tar.gz
 Project/Project-Copy1.ipynb
+
+Project/cluster_data/\.DS_Store
+
+\.DS_Store
