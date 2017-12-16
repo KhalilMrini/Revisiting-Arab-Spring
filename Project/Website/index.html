@@ -217,8 +217,81 @@
 						<br/><br/><br/><br/><br/>
 
 						<h2>Topics Detection</h2>
+						<!-- Select choose -->
+						<p id="demo">"Chooose !!"</p>
+							<table>
+									<thead>
+										<tr>
+											<th>Select a Country</th>
+											<th>Select a Language</th>
+											<th>Select a Type</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<select id="country" class="lda"> 
+											        <option value="Egypt">Select a Country</option> 
+											        <option value="Egypt">Egypt</option>
+											      	<option value="Tunisia">Tunisia</option> 
+											     </select>
+											</td>
 
-						<iframe width="1190" height="768" src="https://khalilmrini.github.io/Private-ADA/Project/Website/data.html" scrolling="no" style="position:relative; top: -90px; left: 0px;-webkit-transform:scale(0.7) translate(-300px,-50px); background-color: rgba(255, 255, 255, .8);"> TEST </iframe>
+											<td>
+												<select id="language" class="lda">  
+											        <option value="english">Select a Language ...</option> 
+											        <option value="arabic">Arabic</option> 
+											        <option value="english">English</option> 
+											        <option value="french">French</option> 
+										     	</select>
+											</td>
+
+											<td>
+												<select id="type"> 
+											        <option value="social_media">Select a Type ...</option> 
+											        <option value="social_media">Social Media</option> 
+											        <option value="mainstream_news">Mainstream News</option> 
+											        <option value="webblog">WebBlog</option> 
+											        <option value="classified">Classified</option> 
+											     </select>
+											</td>
+
+											<td>
+												<button onclick="setIframeSource()">Go</button>
+											</td>
+										</tr>
+
+										<script type="text/javascript">
+											    function setIframeSource() {
+											   var country = document.getElementById('country');
+											   var language = document.getElementById('language');
+											   var type = document.getElementById('type');
+											  
+											   var count = country.options[country.selectedIndex].value;
+											   var lang = language.options[language.selectedIndex].value;
+											   var typ = type.options[type.selectedIndex].value;
+
+											   var demo = document.getElementById('demo');
+											  
+											   var theUrl = count.concat(' ', lang, ' ', type);
+											   var baseUrl = "http://www.dw.com/search/?languageCode=LANGUAGE&item=COUNTRY%20TYPE&searchNavigationId=9097-1452-32771-2469-30687-101618-8120&sort=RELEVANCE&resultsCounter=100";
+											   var theUrl = baseUrl.replace("COUNTRY", count).replace("TYPE", typ).replace("LANGUAGE", lang.substr(0,2));
+
+											   demo.innerHTML = theUrl;
+											   
+											   var theIframe = document.getElementById('myIframe');
+											   theIframe.src = theUrl;
+											   }
+
+											  </script>
+										
+									</tbody>
+								</table>
+
+						
+
+
+						<iframe width="1190" height="768" id="myIframe" src="https://khalilmrini.github.io/Private-ADA/Project/Website/data.html" scrolling="no" style="position:relative; top: -90px; left: 0px;-webkit-transform:scale(0.7) translate(-300px,-50px); background-color: rgba(255, 255, 255, .8);"> TEST </iframe>
 					</article>
 				</div>
 				<!--<a href="#five" class="more">Learn More</a> -->
