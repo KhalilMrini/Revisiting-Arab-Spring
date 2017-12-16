@@ -1,0 +1,253 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Revisiting the demands of the Tunisian and Egyptian springs</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<SCRIPT TYPE="text/javascript"> 
+			function popup(mylink, windowname) { 
+				if (! window.focus)return true; 
+				var href; if (typeof(mylink) == 'string') href=mylink; 
+				else href=mylink.href; 
+				window.open(href, windowname, 'width=1300,height=1000,scrollbars=yes,fullscreen=yes, menubar=no, status=no, titlebar=no'); 
+				return false; } </SCRIPT>
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">Revisiting the demands of the Tunisian and Egyptian springs<span>  EPFL</span></a></div>
+				<a href="#menu"><span>Menu</span></a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="./index.html" style="font-size: 15px; font-weight: bold;">Home</a></li>
+					<li><a href="./dataset.html" style="font-size: 15px; font-weight: bold;">Dataset</a></li>
+				</ul>
+			</nav>
+
+		<!-- Banner -->
+		<!--
+			Note: To show a background image, set the "data-bg" attribute below
+			to the full filename of your image. This is used in each section to set
+			the background image.
+		-->
+			<section id="banner" class="bg-img" data-bg="banner.jpg">
+				<div class="inner">
+					<header>
+						<h1>7 years on, revisiting the demands of the Tunisian and Egyptian springs</h1>
+					</header>
+					<body>
+						<!--Introduction-->
+
+						
+					</body>
+				</div>
+
+				<a href="#one" class="more">Learn More</a>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="wrapper post bg-img" data-bg="banner2.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h3>7 years on, revisiting the demands of the Tunisian and Egyptian springs</h3>
+							<p>Applied Data Analysis Project</p>
+						</header>
+						<div class="content" >
+							<p"> In the 2011 Arab Spring, the two most significant revolutions happened in Tunisia and Egypt. 7 years later, we aim to revisit the most recurrent demands expressed by the people on social media. Instead of fishing for pre-defined topics or keywords, we want to let the data directly reflect popular concerns. Here, we want to tell the story of the people behind the revolutions from their own perspective. The motivation behind this project is to bring you closer to the story to understand what drove Tunisians and Egyptians to the streets. 
+							</p>
+
+							<p>
+								The dataset used extends from January 13th to February 14th 2011, roughly covering the time period in between the Tunisian presidential resignation and the Egyptian one. This provides an opportunity to look into how one uprising led to the second. The types of textual data include news articles, online blogs and social media posts. We want also to know whether news articles followed the social media trends.
+							</p>
+
+							<p>
+								The dataset used in this work is the <b>ICWSM 2011 <i><a href="dataset.html"">Spinn3r</a></i> dataset </b>, containing a large amounts (approximatelly 3GB) of social media posts and online blogs, as well as news articles.
+							</p>
+
+							<!--<div class="content" style="display:none">
+								<script type="text/javascript" src='chord.js'></script>
+							</div>-->
+
+						</div>
+
+						<footer>
+							<a href="dataset.html" class="button alt fit">Learn More about <i><b>Spinn3r</b> dataset</i></a>
+						</footer>
+					</article>
+				</div>
+				<a href="#two" class="more">Learn More</a>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper post bg-img" data-bg="banner5.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Tunisia</h2>
+						</header>
+						<div class="content">
+							<p>
+							The Chord diagram shows the inter-relationships between entities. Each entity is represented by a node segment, all arranged along a cercle. The connections between nodes, represented by an Arc (Chord), shows similarities between them.</p>
+								<p>We use the Chord diagram to characterize the most active terrorist groups.  
+								We focus on the 30 most common terrorist groups (i.e. the groups responsible for the most attacks), and show their relation to other variables. In order to guarantee the legibility of the diagram, we need to select discrete variables with not too many categories. Based on these observations, we chose to characterize the terrorist groups by the regions in which they're active, the weapons they use, their targets \& preferred type of attack, how often they're successful in their attacks and which groups conduct suicide attacks.</p>
+
+							<a href="./chord.html" onClick="return popup(this, 'notes')">
+							<span class="row 50% uniform">
+								<div class="4u">
+									<span class="image fit">
+										<img src="images/images/img3.jpg" alt="">
+									</span>
+								</div>
+
+								<div class="4u">
+									<span class="image fit">
+										<img src="images/images/img1.jpg" alt="">
+									</span>
+								</div>
+
+								<div class="4u">
+									<span class="image fit">
+										<img src="images/images/img2.jpg" alt="">
+									</span>
+								</div>
+
+							</span>
+							</a>
+						</div>
+
+						<a href="./chord.html" class="button fit" onClick="return popup(this, 'notes')">
+								Visualize Something </a> <p></p>
+						
+						<footer>
+							<a href="chord_info.html" class="button alt fit">Learn More</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#three" class="more">Learn More</a>
+			</section>
+
+			<!-- Two -->
+			<section id="three" class="wrapper post bg-img" data-bg="banner5.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Egypt</h2>
+						</header>
+						<div class="content">
+							<p>
+							Post Type Distribution: We notice that both dates contain a negligible amount of the type CLASSIFIED. However, whereas the distributions in NEWS, SOCIAL_MEDIA and FORUM are close to equal for Jan. 14, over half of the shares of posts are SOCIAL_MEDIA posts for Feb. 11, and there are less FORUM posts.</p>
+							<p> Language Distribution: The distribution of languages is overall skewed to English for both, but more so for Feb. 11. Given the fact that Tunisia has a large francophone population, there is more French-language data for Jan. 14. Likewise, Egypt has a large English-speaking population, and that could explain the fact that English has a larger share in Feb. 11.</p>
+
+							<a href="./chord.html" onClick="return popup(this, 'notes')">
+							<span class="row 50% uniform">
+								<div class="4u">
+									<span class="image fit">
+										<img src="images/plots/plot3.jpg" alt="">
+									</span>
+								</div>
+
+								<div class="4u">
+									<span class="image fit">
+										<img src="images/plots/plot2.jpg" alt="">
+									</span>
+								</div>
+
+								<div class="4u">
+									<span class="image fit">
+										<img src="images/plots/plot2.jpg" alt="">
+									</span>
+								</div>
+
+							</span>
+							</a>
+						</div>
+
+						<a href="./chord.html" class="button fit" onClick="return popup(this, 'notes')">
+								Visualize Something </a> <p></p>
+						
+						<footer>
+							<a href="chord_info.html" class="button alt fit">Learn More</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#four" class="more">Learn More</a>
+			</section>
+
+
+
+		<!-- Three -->
+			<section id="four" class="wrapper post bg-img" data-bg="banner4.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>....</h2>
+						</header>
+						<div class="content">
+							<p>...: ... ??</p>
+
+							<a href="./chord.html" onClick="return popup(this, 'notes')">
+							<span class="image fit">
+								<img src="images/plots/plot1.jpg" alt="">
+							</span>
+							</a>
+						</div>
+
+						<a href="./Analysis/Test_Map/test.html" class="button fit" onClick="return popup(this, 'notes')">
+								Visualize the ...</a> <p></p>
+
+						<footer>
+							<a href="map_info.html" class="button alt fit">Learn More</a>
+						</footer>
+					</article>
+				</div>
+				<!--<a href="#five" class="more">Learn More</a> -->
+			</section>
+
+
+		<!-- Four -->
+		<!--
+			<section id="four" class="wrapper post bg-img" data-bg="banner3.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Luctus blandit mi lectus in nascetur</h2>
+							<p>10.30.2016</p>
+						</header>
+						<div class="content">
+							<p>Scelerisque enim mi curae erat ultricies lobortis donec velit in per cum consectetur purus a enim platea vestibulum lacinia et elit ante scelerisque vestibulum. At urna condimentum sed vulputate a duis in senectus ullamcorper lacus cubilia consectetur odio proin sociosqu a parturient nam ac blandit praesent aptent. Eros dignissim mus mauris a natoque ad suspendisse nulla a urna in tincidunt tristique enim arcu litora scelerisque eros suspendisse.</p>
+						</div>
+						<footer>
+							<a href="generic.html" class="button alt">Learn More</a>
+						</footer>
+					</article>
+				</div>
+			</section>-->
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<div class="copyright">
+						&copy; Revisiting the demands of the Tunisian and Egyptian springs <a href="https://epfl.ch">EPFL</a>.
+					</div>
+
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
