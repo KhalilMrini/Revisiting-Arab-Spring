@@ -9,7 +9,7 @@ EG = 'Egypt'
 TN = 'Tunisia'
 COUNTRIES = [EG, TN]
 
-KEYPHRASE_PATH = './Keyphrases/'
+KEYPHRASE_PATH = '/home/mrini/Keyphrases/'
 
 keyphrase_dict = dict((country, 
                        dict((language, open('{}{}_{}.txt'.format(
@@ -39,7 +39,7 @@ def compute_keyphrase_scores(text, language):
     :param language: string
     :return: dict or boolean
     """
-    new_text = text.lower()
+    new_text = text.encode('utf-8', 'ignore').lower()
     data = {}
     score_sum = 0
     for country in keyphrase_dict:
@@ -86,73 +86,139 @@ def sequential_operation(data_rows, entry):
     :param entry: string
     :return: list of dictionaries
     """
-    try:
-        # Loading the entry string as a dict
-        entry_dict = json.loads(entry)
+    # Loading the entry string as a dict
+    entry_dict = json.loads(entry.encode('utf-8', 'ignore'))
+    
+    lang_code = entry_dict['feedEntry']['language']
         
-        lang_code = entry_dict['feedEntry']['language']
-            
-        # Proceeding if the language is English, French or Arabic
-        if lang_code in CODE_TO_LANG:
-            post_title = entry_dict['feedEntry']['title']
-            
-            # Post Content
-            try:
-                post_content = BeautifulSoup(zlib.decompress(
-                    entry_dict['feedEntry']['content']), "html.parser").text
-            except:
-                post_content = ""
-            
-            data = compute_keyphrase_scores(post_title + ' ' + post_content, 
-                                                CODE_TO_LANG[lang_code])
-            
-            if data:
-                datetime = entry_dict['feedEntry']['lastPublished']
-                if not datetime:
-                    datetime = entry_dict['feed']['lastPublished']
-                    
-                if check_datetime(datetime):
-                    # Language Code
-                    data['Lang_Code'] = lang_code
-
-                    # Post Title
-                    data['Post_Title'] = post_title
-                    
-                    # Date & Time
-                    data['Datetime'] = datetime
+    # Proceeding if the language is English, French or Arabic
+    if lang_code in CODE_TO_LANG:
+        post_title = entry_dict['feedEntry']['title']
+        
+        # Post Content
+        try:
+            post_content = entry_dict['feedEntry']['content']
+        except:
+            post_content = ""
+        
+        data = compute_keyphrase_scores(post_title + ' ' + post_content, 
+                                            CODE_TO_LANG[lang_code])
+        
+        if data:
+            datetime = entry_dict['feedEntry']['lastPublished']
+            if not datetime:
+                datetime = entry_dict['feed']['lastPublished']
                 
-                    # Post Content
-                    if post_content:
-                        data['Post_Content'] = post_content
+            if check_datetime(datetime):
+                # Language Code
+                data['Lang_Code'] = lang_code
 
-                    # Link
-                    try:
-                        data['Post_Link'] = entry_dict['feedEntry']['url']
-                    except:
-                        pass
+                # Post Title
+                data['Post_Title'] = post_title
                 
-                    # Author Name
-                    try:
-                        data['Author_Name'] = entry_dict['feedEntry']['authorName']
-                    except:
-                        pass
+                # Date & Time
+                data['Datetime'] = datetime
+            
+                # Post Content
+                if post_content:
+                    data['Post_Content'] = post_content
 
-                    # Identifier
-                    try:
-                        data['Identifier'] = entry_dict['feedEntry']['identifier']
-                    except:
-                        pass
+                # Link
+                try:
+                    data['Post_Link'] = entry_dict['feedEntry']['url']
+                except:
+                    pass
+            
+                # Author Name
+                try:
+                    data['Author_Name'] = entry_dict['feedEntry']['authorName']
+                except:
+                    pass
 
-                    # Publisher Type
-                    try:
-                        data['Type'] = entry_dict['source']['publisherType']
-                    except:
-                        pass
+                # Identifier
+                try:
+                    data['Identifier'] = entry_dict['feedEntry']['identifier']
+                except:
+                    pass
 
-                    data_rows.append(data)
-    except:
-        pass
+                # Publisher Type
+                try:
+                    data['Type'] = entry_dict['source']['publisherType']
+                except:
+                    pass
+
+                data_rows.append(data)
     return data_rows
+
+def map_operation(entry):
+    """
+    Returns entry or empty set.
+    :param entry: string
+    :return: list of dictionaries
+    """
+    # Loading the entry string as a dict
+    entry_dict = json.loads(entry.encode('utf-8', 'ignore'))
+    
+    lang_code = entry_dict['feedEntry']['language']
+        
+    # Proceeding if the language is English, French or Arabic
+    if lang_code in CODE_TO_LANG:
+        post_title = entry_dict['feedEntry']['title']
+        
+        # Post Content
+        try:
+            post_content = entry_dict['feedEntry']['content']
+        except:
+            post_content = ""
+        
+        data = compute_keyphrase_scores(post_title + ' ' + post_content, 
+                                            CODE_TO_LANG[lang_code])
+        
+        if data:
+            datetime = entry_dict['feedEntry']['lastPublished']
+            if not datetime:
+                datetime = entry_dict['feed']['lastPublished']
+                
+            if check_datetime(datetime):
+                # Language Code
+                data['Lang_Code'] = lang_code
+
+                # Post Title
+                data['Post_Title'] = post_title
+                
+                # Date & Time
+                data['Datetime'] = datetime
+            
+                # Post Content
+                if post_content:
+                    data['Post_Content'] = post_content
+
+                # Link
+                try:
+                    data['Post_Link'] = entry_dict['feedEntry']['url']
+                except:
+                    pass
+            
+                # Author Name
+                try:
+                    data['Author_Name'] = entry_dict['feedEntry']['authorName']
+                except:
+                    pass
+
+                # Identifier
+                try:
+                    data['Identifier'] = entry_dict['feedEntry']['identifier']
+                except:
+                    pass
+
+                # Publisher Type
+                try:
+                    data['Type'] = entry_dict['source']['publisherType']
+                except:
+                    pass
+
+                return data
+    return None
 
 from pyspark import SparkContext, SQLContext 
 
@@ -163,11 +229,21 @@ sqlContext = SQLContext(sc)
 
 rdd = sc.textFile(SPINNER_JSON_PATH)
 
-comb_op = (lambda x, y: x + y)
-data_rows = rdd.aggregate([], sequential_operation, comb_op)
+mapped_rdd = rdd.map(map_operation)
+filtered_rdd = mapped_rdd.filter(lambda entry: bool(entry))
 
-import pickle
+#file = open('/buffer/mrini/data.txt', 'w')
+#file.write(filtered_rdd.count())
+#file.close()
 
-file = open('data.pkl', 'w')
-pickle.dump(data_rows, file)
-file.close()
+#data_rows = filtered_rdd.collect()
+filtered_rdd.saveAsPickleFile('hdfs:////user/mrini/data.pkl')
+
+#comb_op = (lambda x, y: x + y)
+#data_rows = rdd.aggregate([], sequential_operation, comb_op)
+
+#import pickle
+
+#file = open('/buffer/mrini/data_rows.pkl', 'w')
+#pickle.dump(data_rows, file)
+#file.close()
