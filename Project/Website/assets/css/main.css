@@ -4058,14 +4058,14 @@
 			}
 
 			.post .more.current {
-				-moz-transition: height 0.2s ease;
-				-webkit-transition: height 0.2s ease;
-				-ms-transition: height 0.2s ease;
-				transition: height 0.2s ease;
-				-moz-animation: more 0.75s ease-out 2s forwards;
-				-webkit-animation: more 0.75s ease-out 2s forwards;
-				-ms-animation: more 0.75s ease-out 2s forwards;
-				animation: more 0.75s ease-out 2s forwards;
+				-moz-transition: height 0.1s ease;
+				-webkit-transition: height 0.1s ease;
+				-ms-transition: height 0.1s ease;
+				transition: height 0.1s ease;
+				-moz-animation: more 0.3s ease-out .5s forwards;
+				-webkit-animation: more 0.3s ease-out .5s forwards;
+				-ms-animation: more 0.3s ease-out .5s forwards;
+				animation: more 0.3s ease-out .5s forwards;
 			}
 
 			.post .more:hover {
@@ -4428,3 +4428,69 @@
 			}
 
 		}
+
+ul.progress_bar{
+  max-width: 29em;
+  width: 100%;
+  padding: 0 18px;
+  height: 2em;
+  margin: 0;
+  padding: 0;
+  font-size: 10px; /* change font size only to scale*/
+}
+
+ul.progress_bar li{
+  width: 25%;
+  float: left;
+  height: 100%;
+  list-style: none;
+  position: relative;
+  margin: 0;a
+  padding: 0;
+}
+
+ul.progress_bar li span{
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: #8ac148;
+  height: .4em;
+  z-index: 1;
+}
+
+ul.progress_bar li.activated:before{
+  background: #fff;
+  border: 0.3em solid #8ac148;
+  box-sizing: border-box;
+}
+
+
+ul.progress_bar li:before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #8ac148;
+    width: 2em;
+    height: 2em;
+    border-radius: 2em;
+    z-index: 2;
+}
+
+ul.progress_bar li:last-child:after{
+    content: '';
+    display: block;
+    position: absolute;
+    right: -2em;
+    top: 0;
+    background: #8ac148;
+    width: 2em;
+    height: 2em;
+    border-radius: 2em;
+    z-index: 2;
+}
