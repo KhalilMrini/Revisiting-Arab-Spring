@@ -9,3 +9,5 @@ Project/cluster_data/\.DS_Store
 Project/DW_scraping.ipynb
 Project/Website/progress.js
 Project/Website/progress.html
+*.pkl
+Project/bigrams_dataframes/Untitled.ipynb

@@ -231,7 +231,6 @@
 										<tr>
 											<td>
 												<select id="country" class="lda"> 
-											        <option value="Egypt">Select a Country</option> 
 											        <option value="Egypt">Egypt</option>
 											      	<option value="Tunisia">Tunisia</option> 
 											     </select>
@@ -239,7 +238,6 @@
 
 											<td>
 												<select id="language" class="lda">  
-											        <option value="english">Select a Language ...</option> 
 											        <option value="arabic">Arabic</option> 
 											        <option value="english">English</option> 
 											        <option value="french">French</option> 
@@ -248,11 +246,10 @@
 
 											<td>
 												<select id="type"> 
-											        <option value="social_media">Select a Type ...</option> 
-											        <option value="social_media">Social Media</option> 
-											        <option value="mainstream_news">Mainstream News</option> 
-											        <option value="webblog">WebBlog</option> 
-											        <option value="classified">Classified</option> 
+											        <option value="SOCIAL_MEDIA">Social Media</option> 
+											        <option value="MAINSTREAM_NEWS">Mainstream News</option> 
+											        <option value="WEBLOG">Web Blog</option> 
+											        <option value="FORUM">Forum</option> 
 											     </select>
 											</td>
 
@@ -274,7 +271,7 @@
 											   var demo = document.getElementById('demo');
 											  
 											   var theUrl = count.concat(' ', lang, ' ', type);
-											   var baseUrl = "https://www.dw.com/search/?languageCode=LANGUAGE&item=COUNTRY%20TYPE&searchNavigationId=9097-1452-32771-2469-30687-101618-8120&sort=RELEVANCE&resultsCounter=100";
+											   var baseUrl = "https://khalilmrini.github.io/Private-ADA/Project/pyLDAvis/COUNTRY_TYPE_LANGUAGE.html";
 											   var theUrl = baseUrl.replace("COUNTRY", count).replace("TYPE", typ).replace("LANGUAGE", lang.substr(0,2));
 
 											   demo.innerHTML = theUrl;
