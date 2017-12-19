@@ -90,15 +90,14 @@
 							<p>Applied Data Analysis Project</p>
 						</header>
 						<div class="content" >
-							<p"> In the 2011 Arab Spring, the two most significant revolutions happened in Tunisia and Egypt. 7 years later, we aim to revisit the most recurrent demands expressed by the people on social media. Instead of fishing for pre-defined topics or keywords, we want to let the data directly reflect popular concerns. Here, we want to tell the story of the people behind the revolutions from their own perspective. The motivation behind this project is to bring you closer to the story to understand what drove Tunisians and Egyptians to the streets. 
-							</p>
-
 							<p>
-								The dataset used extends from January 13th to February 14th 2011, roughly covering the time period in between the Tunisian presidential resignation and the Egyptian one. This provides an opportunity to look into how one uprising led to the second. The types of textual data include news articles, online blogs and social media posts. We want also to know whether news articles followed the social media trends.
+								In the 2011 Arab Spring, the two most significant revolutions happened in Tunisia and Egypt. 7 years later, we aim to revisit the most recurrent demands expressed by the people on social media. Instead of fishing for pre-defined topics or keywords, we want to let the data directly reflect popular concerns. Here, we want to tell the story of the people behind the revolutions from their own perspective. The motivation behind this project is to bring you closer to the story to understand what drove Tunisians and Egyptians to the streets. With this purpose on mind, we will take a meticulous look into the their expressed demands and concerns. Furthermore, we will analyse how they relate to each other. 
 							</p>
-
 							<p>
-								The dataset used in this work is the <b>ICWSM 2011 <i><a href="dataset.html"">Spinn3r</a></i> dataset </b>, containing a large amounts (approximatelly 3GB) of social media posts and online blogs, as well as news articles.
+								The dataset used extends from January 13th to February 14th 2011, roughly covering the time period in between the Tunisian presidential resignation and the Egyptian one. With this analysis, we will take a look into how one uprising led to the second. We will will see how the Tunisian revolution bring about the Egyptian one. To accomplish this, we will dive deeper into the data, by studying people’s behaviour in Social Media, as well as the taking a careful look into the News and Web Blogs we have at our disposal.
+							</p>
+							<p>
+								As conclusion, we will observe how accurately the news represent popular demands and concerns. Such analysis pretends to explore how different information sources describe the same context. Since there are noticeable vocabulary differences between distinct information sources, we investigate this further using topic modelling and text mining techniques according to: Post Category, Language, Country.
 							</p>
 
 							<!--<div class="content" style="display:none">
@@ -122,13 +121,15 @@
 							<p>Applied Data Analysis Project</p>
 						</header>
 						<div class="content" >
-							<p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+							<p>
+								The dataset we used in this work is the <b>ICWSM 2011 <i><a href="dataset.html"">Spinn3r</a></i> dataset </b>.  This is a huge size dataset (~3TB), and contains much information that is not of interest to our analysis. Therefore, the definition of a robust filtering function to collect meaningful data for our analysis is of extreme importance. With the purpose of filtering the data in an unbiased way, we use keyphrases to filter this data based on the Tunisian and Egyptian revolutions topics. This way, we are not imposing any bias from the beginning, since any file is considered, as long as it is related with the thematic we are working on. Using Wikipedia articles for the Tunisian and Egyptian revolutions, we automatically extract the keyphrases that will be used for filtering. 
 							</p>
-
-							<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. <br>
-							The dataset used in this work is the <b>ICWSM 2011 <i><a href="dataset.html"">Spinn3r</a></i> dataset </b>, containing a large amounts (approximatelly 3GB) of social media posts and online blogs, as well as news articles.
+							<p>
+								A good insight is provided by evaluating data not only in English, but in two additional languages: French, Tunisia's colonial-era and second most popular language, and Arabic, the native language of both the peoples of Tunisia and Egypt. Such analysis will enable the obstervation interesting particularities, depending on which language the informations is inferred from.
+								The dataset contains posts from 4 different sources. Those are Social Media, Web blog, News, Forums.  This diversity plays an important role in the following analysis, since different sources contain different types of content.
+								The possession of date records in the dataset opens a great opportunity to follow on with a analysis of how topics vary as time goes by.
 							</p>
-
+							
 							<!--<div class="content" style="display:none">
 								<script type="text/javascript" src='chord.js'></script>
 							</div>-->
