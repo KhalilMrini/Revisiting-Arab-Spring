@@ -14,12 +14,13 @@
 				else href=mylink.href; 
 				window.open(href, windowname, 'width=1300,height=1000,scrollbars=yes,fullscreen=yes, menubar=no, status=no, titlebar=no'); 
 				return false; } </SCRIPT>
+			
 	</head>
 	<body>
 
 		<!-- Header -->
 			<header id="header">
-				<div class="logo"><a href="index.html">Revisiting the demands of the Tunisian and Egyptian springs<span>  EPFL</span></a></div>
+				<div class="logo"><a href="index.html">Revisiting the demands of the Tunisian and Egyptian springs<span>	EPFL</span></a></div>
 				<a href="#menu"><span>Menu</span></a>
 			</header>
 
@@ -96,7 +97,7 @@
 						<div class="content">
 							<p>
 							The Chord diagram shows the inter-relationships between entities. Each entity is represented by a node segment, all arranged along a cercle. The connections between nodes, represented by an Arc (Chord), shows similarities between them.</p>
-								<p>We use the Chord diagram to characterize the most active terrorist groups.  
+								<p>We use the Chord diagram to characterize the most active terrorist groups.	
 								We focus on the 30 most common terrorist groups (i.e. the groups responsible for the most attacks), and show their relation to other variables. In order to guarantee the legibility of the diagram, we need to select discrete variables with not too many categories. Based on these observations, we chose to characterize the terrorist groups by the regions in which they're active, the weapons they use, their targets \& preferred type of attack, how often they're successful in their attacks and which groups conduct suicide attacks.</p>
 
 							<a href="./chord.html" onClick="return popup(this, 'notes')">
@@ -212,15 +213,18 @@
 		<!-- five -->
 			<section id="five" class="wrapper post bg-img" data-bg="banner5.jpg">
 				<div class="inner">
-					<article class="box">
+					<article class="box" >
+						<!--
 						<br/><br/><br/><br/><br/>
 						<br/><br/><br/><br/><br/>
 						<br/><br/><br/><br/><br/>
+						
+						<div class="viz_description">
+							This div element has position: fixed;
+						</div>
 
 						<h2>Topics Detection</h2>
-						<!-- Select choose -->
-						<p id="demo">"Chooose !!"</p>
-							<table>
+							<table style="position:relative; top: -70px; left: 0px;">
 									<thead>
 										<tr>
 											<th>Select a Country</th>
@@ -232,26 +236,26 @@
 										<tr>
 											<td>
 												<select id="country" class="lda"> 
-											        <option value="Egypt">Egypt</option>
-											      	<option value="Tunisia">Tunisia</option> 
-											     </select>
+														<option value="Egypt">Egypt</option>
+														<option value="Tunisia">Tunisia</option> 
+													</select>
 											</td>
 
 											<td>
-												<select id="language" class="lda">  
-											        <option value="arabic">Arabic</option> 
-											        <option value="english">English</option> 
-											        <option value="french">French</option> 
-										     	</select>
+												<select id="language" class="lda">	
+														<option value="arabic">Arabic</option> 
+														<option value="english">English</option> 
+														<option value="french">French</option> 
+													</select>
 											</td>
 
 											<td>
 												<select id="type"> 
-											        <option value="SOCIAL_MEDIA">Social Media</option> 
-											        <option value="MAINSTREAM_NEWS">Mainstream News</option> 
-											        <option value="WEBLOG">Web Blog</option> 
-											        <option value="FORUM">Forum</option> 
-											     </select>
+														<option value="SOCIAL_MEDIA">Social Media</option> 
+														<option value="MAINSTREAM_NEWS">Mainstream News</option> 
+														<option value="WEBLOG">Web Blog</option> 
+														<option value="FORUM">Forum</option> 
+													</select>
 											</td>
 
 											<td>
@@ -260,42 +264,232 @@
 										</tr>
 
 										<script type="text/javascript">
-											    function setIframeSource() {
-											   var country = document.getElementById('country');
-											   var language = document.getElementById('language');
-											   var type = document.getElementById('type');
-											  
-											   var count = country.options[country.selectedIndex].value;
-											   var lang = language.options[language.selectedIndex].value;
-											   var typ = type.options[type.selectedIndex].value;
+												 function setIframeSource() {
+												var country = document.getElementById('country');
+												var language = document.getElementById('language');
+												var type = document.getElementById('type');
+												
+												var count = country.options[country.selectedIndex].value;
+												var lang = language.options[language.selectedIndex].value;
+												var typ = type.options[type.selectedIndex].value;
 
-											   var demo = document.getElementById('demo');
-											  
-											   var theUrl = count.concat(' ', lang, ' ', type);
-											   var baseUrl = "https://khalilmrini.github.io/Private-ADA/Project/pyLDAvis/COUNTRY_TYPE_LANGUAGE.html";
-											   var theUrl = baseUrl.replace("COUNTRY", count).replace("TYPE", typ).replace("LANGUAGE", lang);
+												var demo = document.getElementById('demo');
+												
+												var theUrl = count.concat(' ', lang, ' ', type);
+												var baseUrl = "https://khalilmrini.github.io/Private-ADA/Project/pyLDAvis/COUNTRY_TYPE_LANGUAGE.html";
+												var theUrl = baseUrl.replace("COUNTRY", count).replace("TYPE", typ).replace("LANGUAGE", lang);
 
-											   demo.innerHTML = theUrl;
-											   
-											   var theIframe = document.getElementById('myIframe');
-											   theIframe.src = theUrl;
-											   }
+												demo.innerHTML = theUrl;
+												
+												var theIframe = document.getElementById('myIframe');
+												theIframe.src = theUrl;
+												}
 
-											  </script>
+												</script>
 										
 									</tbody>
 								</table>
 
-						
-						<!--
-							<iframe width="1200" height="768" id="myIframe" src="https://khalilmrini.github.io/Private-ADA/Project/Website/data.html" scrolling="no" style="position:relative; top: -90px; left: 0px;-webkit-transform:scale(0.7) translate(-300px,-50px); background-color: rgba(255, 255, 255, .8);"> TEST </iframe>
-						-->
-						<iframe width="158%" height="768" id="myIframe" src="https://khalilmrini.github.io/Private-ADA/Project/Website/data.html" scrolling="no" style="position:relative; top: -90px; left: 0px;-webkit-transform:scale(0.7) translate(-300px,-50px); background-color: rgba(255, 255, 255, .8);"> TEST </iframe>
+							
 
-						
+							<div>
+								<iframe width="1200" height="768" id="myIframe2" src="https://khalilmrini.github.io/Private-ADA/Project/Website/data.html" scrolling="no" style="position:relative; top: -190px; left: 0px;-webkit-transform:scale(0.7) translate(-300px,-50px); background-color: rgba(255, 255, 255, .8);"> TEST </iframe>
+							</div>
+							-->
 					</article>
 				</div>
-				<!--<a href="#five" class="more">Learn More</a> -->
+				<a href="#five" class="more">Learn More</a>
+			</section>
+
+			<!-- five -->
+			<section id="five" class="wrapper post bg-img" data-bg="banner1.jpg">
+				<div class="inner" style="position:relative; top: 370px; left: 0px; width: 85em">
+					<article class="box" >
+						<h2>Topics Detection</h2>
+						<!-- Select choose -->
+							
+							<table style="position:relative; top: -20px; left: -20px;">
+									<thead>
+										<tr>
+											<th>Select a Country</th>
+											<th>Select a Language</th>
+											<th>Select a Type</th>
+											<th>Select a Visualization</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<select id="country" class="lda"> 
+														<option value="Egypt">Egypt</option>
+														<option value="Tunisia">Tunisia</option> 
+													</select>
+											</td>
+
+											<td>
+												<select id="language" class="lda">	
+														<option value="arabic">Arabic</option> 
+														<option value="english">English</option> 
+														<option value="french">French</option> 
+													</select>
+											</td>
+
+											<td>
+												<select id="type" class="lda"> 
+														<option value="SOCIAL_MEDIA">Social Media</option> 
+														<option value="MAINSTREAM_NEWS">Mainstream News</option> 
+														<option value="WEBLOG">Web Blog</option> 
+														<option value="FORUM">Forum</option> 
+													</select>
+											</td>
+
+											<td>
+												<select id="viz" class="lda"> 
+														<option value="html">Topic Detection</option>
+														<option value="jpg">Time Serie</option> 
+													</select>
+											</td>
+
+											<td>
+												<button onclick="setIframeSource()">Go</button>
+											</td>
+										</tr>
+
+										<script type="text/javascript">
+												function setIframeSource() {
+												var country = document.getElementById('country');
+												var language = document.getElementById('language');
+												var type = document.getElementById('type');
+												var viz = document.getElementById('viz');
+												
+												var count = country.options[country.selectedIndex].value;
+												var lang = language.options[language.selectedIndex].value;
+												var typ = type.options[type.selectedIndex].value;
+												var vizz = viz.options[viz.selectedIndex].value;
+
+												var viz_description = document.getElementById('viz_description');
+												
+												var theUrl = count.concat(' ', lang, ' ', type);
+												var baseUrl = "https://khalilmrini.github.io/Private-ADA/Project/pyLDAvis/COUNTRY_TYPE_LANGUAGE.VISUALIZATION.";
+												var theUrl = baseUrl.replace("VISUALIZATION", vizz).replace("COUNTRY", count).replace("TYPE", typ).replace("LANGUAGE", lang);
+
+
+												//description switch cases
+												var description = ""
+												
+												if (count == "Egypt") {
+													if (lang == "arabic") {
+														if (typ == "MAINSTREAM_NEWS") {
+															description = "Egypt arabic MAINSTREAM_NEWS";
+														} else if (typ == "SOCIAL_MEDIA") {
+															description = "Egypt arabic SOCIAL_MEDIA";
+														} else if (typ == "FORUM") {
+															description = "Egypt arabic FORUM";
+														} else {
+															// WEBLOG
+															description = "Egypt arabic WEBLOG";
+														}
+
+													} else if (lang == "french"){
+														if (typ == "MAINSTREAM_NEWS") {
+															description = "Egypt french MAINSTREAM_NEWS";
+														} else if (typ == "SOCIAL_MEDIA") {
+															description = "Egypt french SOCIAL_MEDIA";
+														} else if (typ == "FORUM") {
+															description = "Egypt french FORUM";
+														} else {
+															// WEBLOG
+															description = "Egypt french WEBLOG";
+														}
+
+													} else {
+														//English
+														if (typ == "MAINSTREAM_NEWS") {
+															description = "Egypt english MAINSTREAM_NEWS"
+														} else if (typ == "SOCIAL_MEDIA") {
+															description = "Egypt english SOCIAL_MEDIAg"
+														} else if (typ == "FORUM") {
+															description = "Egypt english FORUM"
+														} else {
+															// WEBLOG
+															description = "Egypt english WEBLOG"
+														}
+														
+													}
+												} else {
+													if (lang == "arabic") {
+														if (typ == "MAINSTREAM_NEWS") {
+															description = "Tunisia arabic MAINSTREAM_NEWS";
+														} else if (typ == "SOCIAL_MEDIA") {
+															description = "Tunisia arabic SOCIAL_MEDIA";
+														} else if (typ == "FORUM") {
+															description = "Tunisia arabic FORUM"
+														} else {
+															// WEBLOG
+															description = "Tunisia arabic WEBLOG"
+														}
+
+													} else if (lang == "french"){
+														if (typ == "MAINSTREAM_NEWS") {
+															description = "Tunisia french MAINSTREAM_NEWS";
+														} else if (typ == "SOCIAL_MEDIA") {
+															description = "Tunisia french SOCIAL_MEDIA";
+														} else if (typ == "FORUM") {
+															description = "Tunisia french FORUM"
+														} else {
+															// WEBLOG
+															description = "Tunisia french WEBLOG"
+														}
+
+													} else {
+														//English
+														if (typ == "MAINSTREAM_NEWS") {
+															description = "Tunisia english MAINSTREAM_NEWS"
+														} else if (typ == "SOCIAL_MEDIA") {
+															description = "Tunisia english SOCIAL_MEDIA"
+														} else if (typ == "FORUM") {
+															description = "Tunisia english FORUM"
+														} else {
+															// WEBLOG
+															description = "Tunisia english WEBLOG"
+														}
+													}
+
+												}
+							 
+
+												viz_description.innerHTML = theUrl;
+												viz_description.innerHTML = description;
+												
+												var theIframe = document.getElementById('myIframe');
+												theIframe.src = theUrl;
+												theIframe.src = "../Topic_Distribution/TN_FORUM_fr.jpg"
+												}
+
+												</script>
+									</tbody>
+								</table>
+
+							<!--
+								<iframe width="1200" height="768" id="myIframe" src="https://khalilmrini.github.io/Private-ADA/Project/Website/data.html" scrolling="no" style="position:relative; top: -90px; left: 0px;-webkit-transform:scale(0.7) translate(-300px,-50px); background-color: rgba(255, 255, 255, .8);"> TEST </iframe>
+								<iframe width="1200" height="768" id="myIframe" src="./images/plots/plot.jpg" scrolling="no" style="position:relative; top: -90px; left: 0px;-webkit-transform:scale(0.7) translate(-300px,-50px); background-color: rgba(255, 255, 255, .8);"> TEST </iframe>
+							-->
+							<div>
+								<iframe width="1200" height="768" id="myIframe" src="https://khalilmrini.github.io/Private-ADA/Project/Website/data.html" scrolling="no" style="position:relative; top: -120px; left: -10px;-webkit-transform:scale(0.7) translate(-300px,-50px); background-color: rgba(255, 255, 255, .7);"> TEST </iframe>
+							</div>
+
+							<div style="position:relative; top: -810px; left: 820px; background-color: rgba(255, 255, 255, 0); width: 350px; height: 500px">
+								<p style="color: white; text-align: justify; font-size: 11px" id="viz_description">
+									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+								</p>
+							</div>
+					</article>
+				</div>
+				<a href="#five" class="more">Learn More</a>
+			</section>
+
+
+				<!--<a href="#five" class="more">Learn More</a>-->
 			</section>
 
 
