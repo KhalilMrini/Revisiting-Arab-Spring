@@ -13,8 +13,34 @@
 				var href; if (typeof(mylink) == 'string') href=mylink; 
 				else href=mylink.href; 
 				window.open(href, windowname, 'width=1300,height=1000,scrollbars=yes,fullscreen=yes, menubar=no, status=no, titlebar=no'); 
-				return false; } </SCRIPT>
-			
+				return false; } 
+		</SCRIPT>
+
+		<style>
+			/* width */
+			::-webkit-scrollbar {
+			    width: 10px;
+			}
+
+			/* Track */
+			::-webkit-scrollbar-track {
+			    box-shadow: inset 0 0 5px grey; 
+			    border-radius: 10px;
+			    background: rgba(255,255,255,0)
+			}
+			 
+			/* Handle */
+			::-webkit-scrollbar-thumb {
+			    background: rgba(191, 0, 22, 0.5); 
+			    border-radius: 10px;
+			}
+
+			/* Handle on hover */
+			::-webkit-scrollbar-thumb:hover {
+			    background: rgba(163, 158, 158, 0.3); 
+			}
+		</style>
+		
 	</head>
 	<body>
 
@@ -253,89 +279,91 @@
 
 
 												//description switch cases
-												var description = ""
+												var final_description = '<ul  style="color: white; text-align: justify; font-size: 11px"> <span style="color:red;font-size:11px; font-weight: 1000"></span> <li><span style="color:red;font-size:11px; font-weight: 1000">The Domino Effect:</span> how Tunisia’s Revolution brought about the Egyptian one. This topic’s vocabulary references both countries. </li> <li><span style="color:red;font-size:11px; font-weight: 1000">Religion:</span> the Egyptian protests reached their maximum after Friday prayers.</li> <li><span style="color:red;font-size:11px; font-weight: 1000">Presidential Resignation:</span> the vocabulary includes names of politicians and names of countries related to the event, like Saudi Arabia where the Tunisian president fled.</li> <li><span style="color:red;font-size:11px; font-weight: 1000">Predicting Revolutions:</span> keywords include names of countries which revolutions only <li>started to unravel, mainly Yemen, Syria and Libya.</li> <li><span style="color:red;font-size:11px; font-weight: 1000">Popular Concerns:</span> this topic expresses demands including democracy, or concerns such as poverty and corruption.</li> <li><span style="color:red;font-size:11px; font-weight: 1000">Noise:</span> these topics are outliers not providing relevant information.</li> <li><span style="color:red;font-size:11px; font-weight: 1000">Protests:</span> this topic mentions activities around the revolution. <li><span style="color:red;font-size:11px; font-weight: 1000">International Reactions:</span> it mentions countries outside the MENA region reacting to the Arab Springs. </li> </ul> <div style="color: white; text-align: justify;font-weight: 550; font-size: 12px; position:relative; height:200px ;overflow-y: scroll;  padding-right:15px;">HERE</div>';
+
+												var description = "";
 												
 												if (count == "Egypt") {
 													if (lang == "arabic") {
 														if (typ == "MAINSTREAM_NEWS") {
-															description = "Egypt arabic MAINSTREAM_NEWS";
+															description = "The Protests cluster contains names of opposition figures such as Mohammed ElBaradei (as a bigram) and makes references to the belligerents of the revolution: the authorities, the opposition, the Egyptian people, the Egyptian President, the Regime. The number of posts about the Domino Effect grow steadily right before the Egyptian Revolution starts.";
 														} else if (typ == "SOCIAL_MEDIA") {
-															description = "Egypt arabic SOCIAL_MEDIA";
+															description = "In Social Media, we see that one of the clusters clearly expresses Popular Concerns, with keywords such as Poverty and Corruption (as a bigram), Joblessness, the People Want (a popular chant), and mentions Anger, a main emotion of the Revolution, and whom it is targeted against: Egyptian President Mubarak, his son Jamal Mubarak (bigram), the Government. A worrying bigram associates Torture with the Revolution, showing the widespread human rights abuses at the time. It is worth noticing the Popular Concerns posts rise right before Egypt’s Revolution starts, and diminish in favour of Live Information on Jan 25. Unlike Egypt’s other Arabic-language clusters, there is a much larger presence of the Egyptian dialect, that overshadows Standard Arabic. An interesting topic cluster is Citizen Journalism, where people share, in Egyptian Arabic, videos, pictures, news about what is going on in Egypt’s streets, which are mentioned as a bigram. Facebook is one of the main keywords in the Protests cluster, whereas the Live Information cluster focuses on what is happening in Cairo’s streets (bigram), and mentions radio programs like Mahdath Lahdah Blahdah of the « Our Freedom » Radio.";
 														} else if (typ == "FORUM") {
-															description = "Egypt arabic FORUM";
+															description = "It seems that Forums are used to share information about events, rather than voice concerns. This is what can be seen in the Protests cluster. There is also general discussion that can be noticed in the Noise clusters.";
 														} else {
 															// WEBLOG
-															description = "Egypt arabic WEBLOG";
+															description = "The Domino Effect cluster takes a pan-Arab undertone by mentioning Tunisia, but also Iraq and keywords like Islam, the People, Arab (likely in reference to Arab Revolutions or Arab Spring), and Arabs. It also mentions youth who have been driving these events. The Protests cluster has as prominent keywords Hosni Mubarak (to-be-ousted Egyptian President), Tahrir Square (epicentre of protests in Cairo), the Egyptian People, Omar Suleiman (Egyptian Vice-President who announced Hosni Mubarak’s resignation), Friday (the day of the week when Egyptian protests flared) and the United States (the White House called on Mubarak to resign towards the end of the revolution, delegitimising his rule). The Opposition Figures cluster mentions Ibrahim Eissa, prominent Egyptian journalist, and Wael Ghonim, prominent online activist and Nobel Peace Prize nominee. The Popular Concerns cluster, although small, mentions bigrams like Spreading Democracy, Protesting Egyptians, Bettering the Standard (likely Standard of Living), but contains a few unrelated words like « per single acre » related to online real estate. There is a visible trend as Domino Effect posts make room for Protests posts starting January 25.";
 														}
 
 													} else if (lang == "french"){
 														if (typ == "MAINSTREAM_NEWS") {
-															description = "Egypt french MAINSTREAM_NEWS";
+															description = "We notice news focus on describing events rather than popular concerns, running contrary to Social Media posts. A large part of Egypt’s French-language news corpus is related to Tunisia, with the media repeatedly linking the events in Egypt to Tunisia with a pan-Arab tone.";
 														} else if (typ == "SOCIAL_MEDIA") {
-															description = "Egypt french SOCIAL_MEDIA";
+															description = "Tunisia dominates Egypt’s French-language Social Media. Here, the Presidential Resignation is about Tunisia and the aftermath of the revolution. Notable keywords are Ghannouchi, Tunisia’s post-revolution PM, and RCD, or the Democratic Constitutional Rally, the Tunisian toppled President’s party. This topic is more prominent in January.";
 														} else if (typ == "FORUM") {
-															description = "Egypt french FORUM";
+															description = "Egypt’s French-language forum data is dominated by talk about Tunisia, most likely as Tunisia has a far larger French-speaking population than Egypt. There’s talk about Tunisia’s new government in the Domino Effect cluster, and International Reactions mention France.";
 														} else {
 															// WEBLOG
-															description = "Egypt french WEBLOG";
+															description = "The largest topic is about International Reactions, but comprises concepts as varied as Gbagbo, the then-embattled Ivorian president, Haiti, Africa, France and Europe, as well as Tunisia. The noise is about Europe, the Euro, France and economic growth. It is worth noticing that the number of Domino Effect posts peak on Presidential Resignations, as well as when the Egyptian Revolution begins.";
 														}
 
 													} else {
 														//English
 														if (typ == "MAINSTREAM_NEWS") {
-															description = "Egypt english MAINSTREAM_NEWS"
+															description = "Egypt english MAINSTREAM_NEWS";
 														} else if (typ == "SOCIAL_MEDIA") {
-															description = "Egypt english SOCIAL_MEDIAg"
+															description = "Egypt english SOCIAL_MEDIAg";
 														} else if (typ == "FORUM") {
-															description = "Egypt english FORUM"
+															description = "Egypt english FORUM";
 														} else {
 															// WEBLOG
-															description = "Egypt english WEBLOG"
+															description = "Egypt english WEBLOG";
 														}
 														
 													}
 												} else {
 													if (lang == "arabic") {
 														if (typ == "MAINSTREAM_NEWS") {
-															description = "Tunisia arabic MAINSTREAM_NEWS";
+															description = "Tunisia’s Arabic-language news corpus is dominated by Egypt, the Arab world’s largest nation. It is worth noticing that the Protests cluster includes keywords such as Facebook and Twitter, that were instrumental to the syncing of the protests. The Domino Effect cluster gets larger as Egypt’s revolution begins. There is close to no talk about the popular demands of Tunisians.";
 														} else if (typ == "SOCIAL_MEDIA") {
-															description = "Tunisia arabic SOCIAL_MEDIA";
+															description = "Tunisia’s Arabic-language Social Media corpus is dominated by events in Egypt as the period covered in our analysis covers the Egyptian Revolution from its beginning until its end. The most salient term in Domino Effect is the bigram Square Protesters, in reference to Tahrir Square in Cairo, where Egyptian protesters camped throughout the revolution. The cluster also mentions the square itself, the Tunisian people, and most importantly the « Tunisian Youngster », likely in reference to Mohammed Bouazizi, and mentions « died », probably in reference to his own death that sparked the Tunisian Revolution. Most interesting is the Popular Concerns cluster, where the two most relevant terms are « For the Tunisian Republic », and « Human Rights », showing the concerns protesters had at the time about widespread abuses. Sidi Bouzid, the Tunisian Revolution started is also mentioned, as well as Tahrir Square and Egypt’s then-ruling and now-dissolved National Democratic Party. The Protests cluster mentions the Tunisian city of El Kef where protests continued onto February against police brutality.";
 														} else if (typ == "FORUM") {
-															description = "Tunisia arabic FORUM"
+															description = "There is talk about Saudi Arabia in the Protests cluster, the country where the Tunisian President fled, and there is a focus on events rather than demands. The Religion cluster is peppered with sports talk, but contains an overwhelming proportion of prayer phrases and mentions of God.";
 														} else {
 															// WEBLOG
-															description = "Tunisia arabic WEBLOG"
+															description = "Tunisia’s Arabic-language Web Blogs show great interest in Egypt’s Revolution. The largest cluster, Popular Concerns, expresses aspirations of the people, like Freedom, the Woman, likely in reference to Women’s Rights, and mention countries like Saudi Arabia, the asylum country of the ousted Tunisian President, and neighbouring Morocco, where major protests are due to start in February. Worries take a religious tone as God appears among the top relevant terms. The Protests cluster has terms related to events, such as the state of emergency, and Saudi Arabia, and more precisely Jeddah, the Saudi Arabian city where Ben Ali lives in. Surprisingly, Canada is mentioned, perhaps in reference to Belhassen Trabelsi, brother-in-law of the ousted Tunisian President, who sought asylum there after the revolution, but was refused in a 2015 ruling. The Post-Tunisian Revolution Concerns cluster includes bigrams such as Religious Extremism, Leila Trabelsi, wife of the ousted President, and the Central Bank, as anger was directed at her embezzling of public funds. In the Time Series, we indeed notice the Egyptian Protests cluster grows when the Egyptian Revolution starts and diminishes after the Egyptian President’s Resignation. In a similar trend to Egypt’s Arabic-language Social Media, Popular Concerns posts experience a peak right before January 25.";
 														}
 
 													} else if (lang == "french"){
 														if (typ == "MAINSTREAM_NEWS") {
-															description = "Tunisia french MAINSTREAM_NEWS";
+															description = "Popular Concerns name politicians ousted during the revolution, President Ben Ali and Prime Minister Ghannouchi, and voice Tunisian aspirations like Freedom and Democracy. The Presidential Resignation cluster shows a transition with keywords like new, old and regime. It also shows the fears of Tunisians as their ousted President fled the country with stolen money (with keyword corruption), and their aspirations (freedoms and democracy). It is worth noticing that posts about Protests peak around the beginning of the Egyptian Revolution.";
 														} else if (typ == "SOCIAL_MEDIA") {
-															description = "Tunisia french SOCIAL_MEDIA";
+															description = "The Predicting Revolutions cluster includes keywords like Egypt and Algeria where protests just started, as well as calls to support the protests, talks about repression and media, like France’s Libération newspaper.";
 														} else if (typ == "FORUM") {
-															description = "Tunisia french FORUM"
+															description = "The forum contain a lot of noise, with keywords such as life, question and job. The Protests cluster is mainly about Tunisia.";
 														} else {
 															// WEBLOG
-															description = "Tunisia french WEBLOG"
+															description = "Popular Concerns voiced in Tunisia’s French-language Web Blogs reveal major demands of the protests like Freedom and Democracy, and of course the downfall of the Regime. Here, international reactions highlight France’s close relationship with former colony Tunisia. They peak as France reacts to the Tunisian Presidential Resignation.";
 														}
 
 													} else {
 														//English
 														if (typ == "MAINSTREAM_NEWS") {
-															description = "Tunisia english MAINSTREAM_NEWS"
+															description = "Tunisia english MAINSTREAM_NEWS";
 														} else if (typ == "SOCIAL_MEDIA") {
-															description = "Tunisia english SOCIAL_MEDIA"
+															description = "Tunisia english SOCIAL_MEDIA";
 														} else if (typ == "FORUM") {
-															description = "Tunisia english FORUM"
+															description = "Tunisia english FORUM";
 														} else {
 															// WEBLOG
-															description = "Tunisia english WEBLOG"
+															description = "Tunisia english WEBLOG";
 														}
 													}
 
 												}
 
-												viz_description.innerHTML = description;
+												viz_description.innerHTML = final_description.replace("HERE", description);
 												
 												var theIframe = document.getElementById('myIframe');
 												theIframe.src = theUrl;
@@ -345,13 +373,30 @@
 									</tbody>
 								</table>
 
+
+
 							<div>
-								<iframe width="1200" height="768" id="myIframe" src="https://khalilmrini.github.io/Private-ADA/Project/Website/data.html" scrolling="no" style="position:relative; top: -120px; left: -10px;-webkit-transform:scale(0.7) translate(-300px,-50px); background-color: rgba(255, 255, 255, .7);"> TEST </iframe>
+								<iframe width="1200" height="768" id="myIframe" src="https://khalilmrini.github.io/Private-ADA/Project/pyLDAvis/Egypt_SOCIAL_MEDIA_arabic.html" scrolling="no" style="position:relative; top: -120px; left: -10px;-webkit-transform:scale(0.7) translate(-300px,-50px); background-color: rgba(232, 232, 232, .9);"> TEST </iframe>
 							</div>
 
 							<div style="position:relative; top: -810px; left: 820px; background-color: rgba(255, 255, 255, 0); width: 350px; height: 500px">
-								<p style="color: white; text-align: justify; font-size: 11px" id="viz_description">
-								</p>
+								<div style="color: white; text-align: justify; font-size: 10px" id="viz_description">
+									<ul  style="color: white; text-align: justify; font-size: 11px">
+										<span style="color:red;font-size:11px; font-weight: 1000"></span>
+										<li><span style="color:red;font-size:11px; font-weight: 1000">The Domino Effect:</span> how Tunisia’s Revolution brought about the Egyptian one. This topic’s vocabulary references both countries. </li>
+										<li><span style="color:red;font-size:11px; font-weight: 1000">Religion:</span> the Egyptian protests reached their maximum after Friday prayers.</li>
+										<li><span style="color:red;font-size:11px; font-weight: 1000">Presidential Resignation:</span> the vocabulary includes names of politicians and names of countries related to the event, like Saudi Arabia where the Tunisian president fled.</li>
+										<li><span style="color:red;font-size:11px; font-weight: 1000">Predicting Revolutions:</span> keywords include names of countries which revolutions only <li>started to unravel, mainly Yemen, Syria and Libya.</li>
+										<li><span style="color:red;font-size:11px; font-weight: 1000">Popular Concerns:</span> this topic expresses demands including democracy, or concerns such as poverty and corruption.</li>
+										<li><span style="color:red;font-size:11px; font-weight: 1000">Noise:</span> these topics are outliers not providing relevant information.</li>
+										<li><span style="color:red;font-size:11px; font-weight: 1000">Protests:</span> this topic mentions activities around the revolution. <br> 
+										<li><span style="color:red;font-size:11px; font-weight: 1000">International Reactions:</span> it mentions countries outside the MENA region reacting to the Arab Springs. </li> 
+									</ul>
+
+									<div style="color: white; text-align: justify;font-weight: 550; font-size: 12px; position:relative; height:200px ;overflow-y: scroll; padding-right:15px;">
+										In Social Media, we see that one of the clusters clearly expresses Popular Concerns, with keywords such as Poverty and Corruption (as a bigram), Joblessness, the People Want (a popular chant), and mentions Anger, a main emotion of the Revolution, and whom it is targeted against: Egyptian President Mubarak, his son Jamal Mubarak (bigram), the Government. A worrying bigram associates Torture with the Revolution, showing the widespread human rights abuses at the time. It is worth noticing the Popular Concerns posts rise right before Egypt’s Revolution starts, and diminish in favour of Live Information on Jan 25. Unlike Egypt’s other Arabic-language clusters, there is a much larger presence of the Egyptian dialect, that overshadows Standard Arabic. An interesting topic cluster is Citizen Journalism, where people share, in Egyptian Arabic, videos, pictures, news about what is going on in Egypt’s streets, which are mentioned as a bigram. Facebook is one of the main keywords in the Protests cluster, whereas the Live Information cluster focuses on what is happening in Cairo’s streets (bigram), and mentions radio programs like Mahdath Lahdah Blahdah of the « Our Freedom » Radio.
+									</div>
+								</div>
 							</div>
 					</article>
 				</div>
@@ -361,25 +406,6 @@
 				<!--<a href="#five" class="more">Learn More</a>-->
 			</section>
 
-
-		<!-- Four -->
-		<!--
-			<section id="four" class="wrapper post bg-img" data-bg="banner3.jpg">
-				<div class="inner">
-					<article class="box">
-						<header>
-							<h2>Luctus blandit mi lectus in nascetur</h2>
-							<p>10.30.2016</p>
-						</header>
-						<div class="content">
-							<p>Scelerisque enim mi curae erat ultricies lobortis donec velit in per cum consectetur purus a enim platea vestibulum lacinia et elit ante scelerisque vestibulum. At urna condimentum sed vulputate a duis in senectus ullamcorper lacus cubilia consectetur odio proin sociosqu a parturient nam ac blandit praesent aptent. Eros dignissim mus mauris a natoque ad suspendisse nulla a urna in tincidunt tristique enim arcu litora scelerisque eros suspendisse.</p>
-						</div>
-						<footer>
-							<a href="generic.html" class="button alt">Learn More</a>
-						</footer>
-					</article>
-				</div>
-			</section>-->
 
 		<!-- Footer -->
 			<footer id="footer">
