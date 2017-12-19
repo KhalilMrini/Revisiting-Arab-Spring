@@ -99,6 +99,9 @@
 							<p>
 								As conclusion, we will observe how accurately the news represent popular demands and concerns. Such analysis pretends to explore how different information sources describe the same context. Since there are noticeable vocabulary differences between distinct information sources, we investigate this further using topic modelling and text mining techniques according to: Post Category, Language, Country.
 							</p>
+							<p>
+								Our observations and answers to all this questions will be presented as text descriptions for the combinations of parameters the user chooses to explore. This considers that there is not a single answer for all the questions we pretend to answer, but instead, there are several specific considerations to be made according to each case.
+							</p>
 
 							<!--<div class="content" style="display:none">
 								<script type="text/javascript" src='chord.js'></script>
@@ -312,14 +315,14 @@
 													} else {
 														//English
 														if (typ == "MAINSTREAM_NEWS") {
-															description = "Egypt english MAINSTREAM_NEWS";
+															description = "It’s interesting to see how the topics 'Domino Effect' and “Opposition Figures” accurately evolve with time. With a lower relevance metric of around 0.25, the Opposition Figures cluster predicts the revolution yet to come in Yemen, referring to words as Yemen, and Saleh (Yemen’s president). This cluster puts a strong emphasis in the opposition , as we can verify by references to names of opposition figures, such as ElBaradei. The Protests cluster shows the uniqueness of these events, with keywords like unprecedented, biggest, and transition. Meanwhile, the international reactions follow these events close, judging by the evolution of posts with the time.";
 														} else if (typ == "SOCIAL_MEDIA") {
-															description = "Egypt english SOCIAL_MEDIAg";
+															description = "By the time analysis, we notice that terms related with the United States intervention become more popular when we get closer to the resignation of the Egyptian President. Thiscan be justified by the famous remarks from Obama on the resignation of Mubarak. Moreover, we observe how topics related to Tunisia were popular close to the Tunisian President resignation, but naturally lost popularity with time. Egyptian Protests are described with words as “revolution,” ”violence”, “army” ,”curfew”. Naturally, such posts are more numerous after Egyptian revolution begins.";
 														} else if (typ == "FORUM") {
-															description = "Egypt english FORUM";
+															description = "From the analysis of “International Reactions”, we verify the strong influence of China in such topic. This give us a great insight of the situation at that time, since the Tahrir Square protests against Hosni Mubarak in Egypt began just after politician Hu returned to Beijing. The spread of protest from one Arab-Islamic country to its neighbours might have seemed predictable. Less so was the effect in China. From the time series analysis, we observe that “Popular Concerns” follow the distribution of the main events that happened in Egypt.";
 														} else {
 															// WEBLOG
-															description = "Egypt english WEBLOG";
+															description = "In Egypt’s English-Language Web Blogs, International Reactions to this events are the largest of the topics, as the text is expressed in not expressed in the native language of the Egyptians and provides an outsider’s perspective on the events. Israel, the US are some of the main keywords, along with Brotherhood, in reference to the banned political party the Muslim Brotherhood, which came to power after the revolution. Democracy also comes up here as one of the top keywords, as well as Military, as Egypt’s Military always wielded a strong political influence. It’s very interesting to observe that one of the collected topics is related with the influence of information systems in the Egyptian Revolution, with Internet coming up as a strong keyword. <br> The Middle East topic mentions countries of the region, like Iran and its leader Khamenei, Lebanon and its embattled leader Hariri, and it predicts Syria’s revolution by associating it to words like violent, unrest and the President Assad. In this topic, a detailed reference to Egyptian protests can be found during the 3 most important dates in this revolutions, as we can see in the time analysis. Moreover, we see a peak in Feb. 6th, which is justified by an interfaith service that was held with Egyptian Christians and Muslims in Tahrir Square, as well as negotiations by Egyptian Vice President Omar Suleiman and opposition representatives, that began during continuing protests throughout the country. <br> The Noise includes references to India, Pakistan, China and Bangladesh which are likely residual information found alongside relevant posts.";
 														}
 														
 													}
@@ -351,14 +354,14 @@
 													} else {
 														//English
 														if (typ == "MAINSTREAM_NEWS") {
-															description = "Tunisia english MAINSTREAM_NEWS";
+															description = "By analysing the most relevant words from the Concern’s topic, we can get a better insight into the concerns and demands showed by Tunisian people, such as “freedom”, “security”, “political”, “economic”, etc. The Tunisian protests are represented as a topic as well. Note that such protest had been less influent  before the Tunisian’s president resignation. “Unrest” and “demands” of people are some of the traces that explain this topic.";
 														} else if (typ == "SOCIAL_MEDIA") {
-															description = "Tunisia english SOCIAL_MEDIA";
+															description = "We verify a strong influence of the domino effect by analysing the most relevant words for the this topic. Egyptian protestors and its president are referred several times. The international reactions to such events are expressed in the topic « International Reactions » Countries such as United States and Obama are highlighted, which is comprehensible, due to Obama’s and Merkel’s active opinion intervention on the subject. ";
 														} else if (typ == "FORUM") {
-															description = "Tunisia english FORUM";
+															description = "The content collected from FORUM is more diverse than the other sources of information- Therefore, topics tend not to be so specifically related with the Arab spring as the remaining ones. The international reactions reveal to be concerned with “bankruptcy”, “economy state”, “government”, etc. The topic related with protests represent a wide range of fields, from concerns of people in Tunisia, such as security, law, etc.";
 														} else {
 															// WEBLOG
-															description = "Tunisia english WEBLOG";
+															description = "International Reactions to this events are described in one of the topics. We observe the main means of communication (media, news, internet, etc) during the spread of this information world wide. In a similar way to Egypt, this English-language data provides an outsider’s view to the events. Moreover, we see how the events going on in Egypt are spread in Tunisian weblogs.  We collect very interesting information about how social movements in the MENA Region are interconnected, with countries like Israel, Egypt, Iran, Lebanon, Yemen and movements like Hezbollah surfacing as top keywords in the MENA Region Topic. Moreover, in topic “Post-Revolution” we get a sense of the post-Tunisian revolution era, described by keywords like Interim (Interim President), Coalition, Unrest, Fragile, and a big emphasis on Power, Friday and Protests.";
 														}
 													}
 
@@ -384,14 +387,13 @@
 								<div style="color: white; text-align: justify; font-size: 10px" id="viz_description">
 									<ul  style="color: white; text-align: justify; font-size: 11px">
 										<span style="color:red;font-size:11px; font-weight: 1000"></span>
-										<li><span style="color:red;font-size:11px; font-weight: 1000">The Domino Effect:</span> how Tunisia’s Revolution brought about the Egyptian one. This topic’s vocabulary references both countries. </li>
+										<li><span style="color:red;font-size:11px; font-weight: 1000">The Domino Effect:</span> how Tunisia’s Revolution brought about the Egyptian one, references both countries.</li>
 										<li><span style="color:red;font-size:11px; font-weight: 1000">Religion:</span> the Egyptian protests reached their maximum after Friday prayers.</li>
-										<li><span style="color:red;font-size:11px; font-weight: 1000">Presidential Resignation:</span> the vocabulary includes names of politicians and names of countries related to the event, like Saudi Arabia where the Tunisian president fled.</li>
-										<li><span style="color:red;font-size:11px; font-weight: 1000">Predicting Revolutions:</span> keywords include names of countries which revolutions only <li>started to unravel, mainly Yemen, Syria and Libya.</li>
-										<li><span style="color:red;font-size:11px; font-weight: 1000">Popular Concerns:</span> this topic expresses demands including democracy, or concerns such as poverty and corruption.</li>
-										<li><span style="color:red;font-size:11px; font-weight: 1000">Noise:</span> these topics are outliers not providing relevant information.</li>
-										<li><span style="color:red;font-size:11px; font-weight: 1000">Protests:</span> this topic mentions activities around the revolution. <br> 
-										<li><span style="color:red;font-size:11px; font-weight: 1000">International Reactions:</span> it mentions countries outside the MENA region reacting to the Arab Springs. </li> 
+										<li><span style="color:red;font-size:11px; font-weight: 1000">Presidential Resignation:</span> the vocabulary includes names of politicians and names of countries related to the events.</li>
+										<li><span style="color:red;font-size:11px; font-weight: 1000">Popular Concerns:</span>this topic expresses demands including democracy, or concerns such as poverty and corruption.</li>
+										<li><span style="color:red;font-size:11px; font-weight: 1000">Noise:</span> outliers not providing relevant information.</li>
+										<li><span style="color:red;font-size:11px; font-weight: 1000">Protests:</span> mentions activities around the revolution. <br> 
+										<li><span style="color:red;font-size:11px; font-weight: 1000">International Reactions:</span> it mentions countries outside the MENA region reacting to the Arab Spring.</li> 
 									</ul>
 
 									<div style="color: white; text-align: justify;font-weight: 550; font-size: 12px; position:relative; height:200px ;overflow-y: scroll; padding-right:15px;">
