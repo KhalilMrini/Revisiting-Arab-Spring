@@ -39,26 +39,6 @@
 			::-webkit-scrollbar-thumb:hover {
 			    background: rgba(163, 158, 158, 0.3); 
 			}
-
-			/* Horizontal menu */
-			#menu-outer {
-				height: 84px;
-				background: url(images/bar-bg.jpg) repeat-x;
-			}
-
-			.table {
-				display: table;   /* Allow the centering to work */
-				margin: 0 auto;
-			}
-
-			ul#horizontal-list {
-				min-width: 696px;
-				list-style: none;
-				padding-top: 20px;
-				}
-				ul#horizontal-list li {
-					display: inline;
-				}
 		</style>
 		
 	</head>
@@ -103,7 +83,7 @@
 		<!--Introduction-->
 		<!-- One -->
 			<section id="one" class="wrapper post bg-img" data-bg="banner1.jpg">
-				<div class="inner" style="transform: scale(.90)">
+				<div class="inner">
 					<article class="box">
 						<header>
 							<h3>7 years on, revisiting the demands of the Tunisian and Egyptian springs</h3>
@@ -135,7 +115,7 @@
 		<!--Dataset-->
 		<!-- Two -->
 			<section id="two" class="wrapper post bg-img" data-bg="banner2.jpg">
-				<div class="inner" style="transform: scale(.92)">
+				<div class="inner">
 					<article class="box">
 						<header>
 							<h3>7 years on, revisiting the demands of the Tunisian and Egyptian springs</h3>
@@ -231,10 +211,11 @@
 
 			<!-- five -->
 			<section id="five" class="wrapper post bg-img" data-bg="banner1.jpg">
-				<div class="inner" style="position:relative; top: 390px; left: 0px; width: 85em; transform: scale(.94);">
+				<div class="inner" style="position:relative; top: 390px; left: 0px; width: 85em">
 					<article class="box" >
 						<h2>Topics Detection</h2>
 						<!-- Select choose -->
+							
 							<table style="position:relative; top: -20px; left: -20px;">
 									<thead>
 										<tr>
@@ -301,13 +282,6 @@
 												var theUrl = baseUrl.replace("VISUALIZATION", vizz).replace("COUNTRY", count).replace("TYPE", typ).replace("LANGUAGE", lang);
 
 
-												var topic1 = document.getElementById('topic1'); 
-												var topic2 = document.getElementById('topic2');
-												var topic3 = document.getElementById('topic3'); 
-												var topic4 = document.getElementById('topic4'); 
-												var topic5 = document.getElementById('topic5'); 
-
-
 												//description switch cases
 												var final_description = '<ul  style="color: white; text-align: justify; font-size: 11px"><span style="color:red;font-size:11px; font-weight: 1000"></span> <p style="color:red;font-size:14px; font-weight: 1200">Common Topics</p> <li><span style="color:red;font-size:11px; font-weight: 1000">The Domino Effect:</span> how Tunisia’s Revolution brought about the Egyptian one, references both countries.</li> <li><span style="color:red;font-size:11px; font-weight: 1000">Religion:</span> the Egyptian protests reached their maximum after Friday prayers.</li> <li><span style="color:red;font-size:11px; font-weight: 1000">Presidential Resignation:</span> the vocabulary includes names of politicians and names of countries related to the events.</li> <li><span style="color:red;font-size:11px; font-weight: 1000">Popular Concerns:</span>this topic expresses demands including democracy, or concerns such as poverty and corruption.</li> <li><span style="color:red;font-size:11px; font-weight: 1000">Noise:</span> outliers not providing relevant information.</li> <li><span style="color:red;font-size:11px; font-weight: 1000">Protests:</span> mentions activities around the revolution. <br>  <li><span style="color:red;font-size:11px; font-weight: 1000">International Reactions:</span> it mentions countries outside the MENA region reacting to the Arab Spring.</li>  </ul> <div style="color: white; text-align: justify;font-weight: 550; font-size: 12px; position:relative; height:200px ;overflow-y: scroll;  padding-right:15px;"><span style="color:red;font-size:14px; font-weight: 1200"> Analysis : </span>HERE</div>';
 
@@ -317,248 +291,77 @@
 													if (lang == "arabic") {
 														if (typ == "MAINSTREAM_NEWS") {
 															description = "The Protests cluster contains names of opposition figures such as Mohammed ElBaradei (as a bigram) and makes references to the belligerents of the revolution: the authorities, the opposition, the Egyptian people, the Egyptian President, the Regime. The number of posts about the Domino Effect grow steadily right before the Egyptian Revolution starts.";
-
-															topic1.innerHTML = "1. Protests"
-															topic2.innerHTML = "2. Domino Effect"
-															topic3.innerHTML = "3. Presidential Resignation"
-															topic4.innerHTML = ""
-															topic5.innerHTML = ""
-
 														} else if (typ == "SOCIAL_MEDIA") {
 															description = "In Social Media, we see that one of the clusters clearly expresses Popular Concerns, with keywords such as Poverty and Corruption (as a bigram), Joblessness, the People Want (a popular chant), and mentions Anger, a main emotion of the Revolution, and whom it is targeted against: Egyptian President Mubarak, his son Jamal Mubarak (bigram), the Government. A worrying bigram associates Torture with the Revolution, showing the widespread human rights abuses at the time. It is worth noticing the Popular Concerns posts rise right before Egypt’s Revolution starts, and diminish in favour of Live Information on Jan 25. Unlike Egypt’s other Arabic-language clusters, there is a much larger presence of the Egyptian dialect, that overshadows Standard Arabic. An interesting topic cluster is Citizen Journalism, where people share, in Egyptian Arabic, videos, pictures, news about what is going on in Egypt’s streets, which are mentioned as a bigram. Facebook is one of the main keywords in the Protests cluster, whereas the Live Information cluster focuses on what is happening in Cairo’s streets (bigram), and mentions radio programs like Mahdath Lahdah Blahdah of the « Our Freedom » Radio.";
-
-															topic1.innerHTML = "1. Popular Concerns"
-															topic2.innerHTML = "2. Domino Effect"
-															topic3.innerHTML = "3. Citizen Journalism"
-															topic4.innerHTML = "4. Protests"
-															topic5.innerHTML = "5. Live Information"
-
 														} else if (typ == "FORUM") {
 															description = "It seems that Forums are used to share information about events, rather than voice concerns. This is what can be seen in the Protests cluster. There is also general discussion that can be noticed in the Noise clusters.";
-
-															topic1.innerHTML = "1. Protests"
-															topic2.innerHTML = "2. Noise (Sports)"
-															topic3.innerHTML = "3. Religion"
-															topic4.innerHTML = "4. Noise (Trading)"
-															topic5.innerHTML = "5. Noise (Forum)"
-
 														} else {
 															// WEBLOG
 															description = "The Domino Effect cluster takes a pan-Arab undertone by mentioning Tunisia, but also Iraq and keywords like Islam, the People, Arab (likely in reference to Arab Revolutions or Arab Spring), and Arabs. It also mentions youth who have been driving these events. The Protests cluster has as prominent keywords Hosni Mubarak (to-be-ousted Egyptian President), Tahrir Square (epicentre of protests in Cairo), the Egyptian People, Omar Suleiman (Egyptian Vice-President who announced Hosni Mubarak’s resignation), Friday (the day of the week when Egyptian protests flared) and the United States (the White House called on Mubarak to resign towards the end of the revolution, delegitimising his rule). The Opposition Figures cluster mentions Ibrahim Eissa, prominent Egyptian journalist, and Wael Ghonim, prominent online activist and Nobel Peace Prize nominee. The Popular Concerns cluster, although small, mentions bigrams like Spreading Democracy, Protesting Egyptians, Bettering the Standard (likely Standard of Living), but contains a few unrelated words like « per single acre » related to online real estate. There is a visible trend as Domino Effect posts make room for Protests posts starting January 25.";
-
-															topic1.innerHTML = "1. Domino Effect"
-															topic2.innerHTML = "2. Protests"
-															topic3.innerHTML = "3. Opposition Figures"
-															topic4.innerHTML = "4. Religion"
-															topic5.innerHTML = "5. Popular Concerns"
-
 														}
 
 													} else if (lang == "french"){
 														if (typ == "MAINSTREAM_NEWS") {
 															description = "We notice news focus on describing events rather than popular concerns, running contrary to Social Media posts. A large part of Egypt’s French-language news corpus is related to Tunisia, with the media repeatedly linking the events in Egypt to Tunisia with a pan-Arab tone.";
-
-															topic1.innerHTML = "1. Domino Effect"
-															topic2.innerHTML = "2. Tunisia’s Revolution"
-															topic3.innerHTML = "3. Predicting Revolutions"
-															topic4.innerHTML = ""
-															topic5.innerHTML = ""
-
 														} else if (typ == "SOCIAL_MEDIA") {
 															description = "Tunisia dominates Egypt’s French-language Social Media. Here, the Presidential Resignation is about Tunisia and the aftermath of the revolution. Notable keywords are Ghannouchi, Tunisia’s post-revolution PM, and RCD, or the Democratic Constitutional Rally, the Tunisian toppled President’s party. This topic is more prominent in January.";
-															topic1.innerHTML = "1. Domino Effect"
-															topic2.innerHTML = "2. Presidential Resignation (Tunisia)"
-															topic3.innerHTML = "3. Politics and Lebanon"
-															topic4.innerHTML = ""
-															topic5.innerHTML = ""
-
 														} else if (typ == "FORUM") {
 															description = "Egypt’s French-language forum data is dominated by talk about Tunisia, most likely as Tunisia has a far larger French-speaking population than Egypt. There’s talk about Tunisia’s new government in the Domino Effect cluster, and International Reactions mention France.";
-
-															topic1.innerHTML = "1. International Reactions"
-															topic2.innerHTML = "2. Domino Effect"
-															topic3.innerHTML = "3. Noise"
-															topic4.innerHTML = ""
-															topic5.innerHTML = ""
-
 														} else {
 															// WEBLOG
 															description = "The largest topic is about International Reactions, but comprises concepts as varied as Gbagbo, the then-embattled Ivorian president, Haiti, Africa, France and Europe, as well as Tunisia. The noise is about Europe, the Euro, France and economic growth. It is worth noticing that the number of Domino Effect posts peak on Presidential Resignations, as well as when the Egyptian Revolution begins.";
-
-															topic1.innerHTML = "1. International Revolution"
-															topic2.innerHTML = "2. Domino Effect"
-															topic3.innerHTML = "3. Noise"
-															topic4.innerHTML = ""
-															topic5.innerHTML = ""
-
 														}
 
 													} else {
 														//English
 														if (typ == "MAINSTREAM_NEWS") {
 															description = "It’s interesting to see how the topics 'Domino Effect' and “Opposition Figures” accurately evolve with time. With a lower relevance metric of around 0.25, the Opposition Figures cluster predicts the revolution yet to come in Yemen, referring to words as Yemen, and Saleh (Yemen’s president). This cluster puts a strong emphasis in the opposition , as we can verify by references to names of opposition figures, such as ElBaradei. The Protests cluster shows the uniqueness of these events, with keywords like unprecedented, biggest, and transition. Meanwhile, the international reactions follow these events close, judging by the evolution of posts with the time.";
-
-															topic1.innerHTML = "1. International Reactions"
-															topic2.innerHTML = "2. Domino Effect"
-															topic3.innerHTML = "3. Opposition Figures"
-															topic4.innerHTML = "4. Protests"
-															topic5.innerHTML = ""
-
 														} else if (typ == "SOCIAL_MEDIA") {
 															description = "By the time analysis, we notice that terms related with the United States intervention become more popular when we get closer to the resignation of the Egyptian President. Thiscan be justified by the famous remarks from Obama on the resignation of Mubarak. Moreover, we observe how topics related to Tunisia were popular close to the Tunisian President resignation, but naturally lost popularity with time. Egyptian Protests are described with words as “revolution,” ”violence”, “army” ,”curfew”. Naturally, such posts are more numerous after Egyptian revolution begins.";
-
-															topic1.innerHTML = "1. United States intervention"
-															topic2.innerHTML = "2. Domino Effect"
-															topic3.innerHTML = "3. Protests"
-															topic4.innerHTML = ""
-															topic5.innerHTML = ""
-
 														} else if (typ == "FORUM") {
 															description = "From the analysis of “International Reactions”, we verify the strong influence of China in such topic. This give us a great insight of the situation at that time, since the Tahrir Square protests against Hosni Mubarak in Egypt began just after politician Hu returned to Beijing. The spread of protest from one Arab-Islamic country to its neighbours might have seemed predictable. Less so was the effect in China. From the time series analysis, we observe that “Popular Concerns” follow the distribution of the main events that happened in Egypt.";
-
-															topic1.innerHTML = "1. International Reactions"
-															topic2.innerHTML = "2. Noise"
-															topic3.innerHTML = "3. Popular Concerns”"
-															topic4.innerHTML = ""
-															topic5.innerHTML = ""
-
 														} else {
 															// WEBLOG
 															description = "In Egypt’s English-Language Web Blogs, International Reactions to this events are the largest of the topics, as the text is expressed in not expressed in the native language of the Egyptians and provides an outsider’s perspective on the events. Israel, the US are some of the main keywords, along with Brotherhood, in reference to the banned political party the Muslim Brotherhood, which came to power after the revolution. Democracy also comes up here as one of the top keywords, as well as Military, as Egypt’s Military always wielded a strong political influence. It’s very interesting to observe that one of the collected topics is related with the influence of information systems in the Egyptian Revolution, with Internet coming up as a strong keyword. <br> The Middle East topic mentions countries of the region, like Iran and its leader Khamenei, Lebanon and its embattled leader Hariri, and it predicts Syria’s revolution by associating it to words like violent, unrest and the President Assad. In this topic, a detailed reference to Egyptian protests can be found during the 3 most important dates in this revolutions, as we can see in the time analysis. Moreover, we see a peak in Feb. 6th, which is justified by an interfaith service that was held with Egyptian Christians and Muslims in Tahrir Square, as well as negotiations by Egyptian Vice President Omar Suleiman and opposition representatives, that began during continuing protests throughout the country. <br> The Noise includes references to India, Pakistan, China and Bangladesh which are likely residual information found alongside relevant posts.";
-
-															topic1.innerHTML = "1. International Reactions"
-															topic2.innerHTML = "2. Noise"
-															topic3.innerHTML = "3. Protests"
-															topic4.innerHTML = "4. Middle East"
-															topic5.innerHTML = ""
-
 														}
 														
 													}
-
-												// Tunisia
 												} else {
 													if (lang == "arabic") {
 														if (typ == "MAINSTREAM_NEWS") {
 															description = "Tunisia’s Arabic-language news corpus is dominated by Egypt, the Arab world’s largest nation. It is worth noticing that the Protests cluster includes keywords such as Facebook and Twitter, that were instrumental to the syncing of the protests. The Domino Effect cluster gets larger as Egypt’s revolution begins. There is close to no talk about the popular demands of Tunisians.";
-
-															topic1.innerHTML = "1. Domino Effect"
-															topic2.innerHTML = "2. Presidential Resignation"
-															topic3.innerHTML = "3. Protests"
-															topic4.innerHTML = ""
-															topic5.innerHTML = ""
-
 														} else if (typ == "SOCIAL_MEDIA") {
 															description = "Tunisia’s Arabic-language Social Media corpus is dominated by events in Egypt as the period covered in our analysis covers the Egyptian Revolution from its beginning until its end. The most salient term in Domino Effect is the bigram Square Protesters, in reference to Tahrir Square in Cairo, where Egyptian protesters camped throughout the revolution. The cluster also mentions the square itself, the Tunisian people, and most importantly the « Tunisian Youngster », likely in reference to Mohammed Bouazizi, and mentions « died », probably in reference to his own death that sparked the Tunisian Revolution. Most interesting is the Popular Concerns cluster, where the two most relevant terms are « For the Tunisian Republic », and « Human Rights », showing the concerns protesters had at the time about widespread abuses. Sidi Bouzid, the Tunisian Revolution started is also mentioned, as well as Tahrir Square and Egypt’s then-ruling and now-dissolved National Democratic Party. The Protests cluster mentions the Tunisian city of El Kef where protests continued onto February against police brutality.";
-
-															topic1.innerHTML = "1. Domino Effect"
-															topic2.innerHTML = "2. Popular Concerns"
-															topic3.innerHTML = "3. Live Information"
-															topic4.innerHTML = "4. Protests"
-															topic5.innerHTML = ""
-
 														} else if (typ == "FORUM") {
 															description = "There is talk about Saudi Arabia in the Protests cluster, the country where the Tunisian President fled, and there is a focus on events rather than demands. The Religion cluster is peppered with sports talk, but contains an overwhelming proportion of prayer phrases and mentions of God.";
-
-															topic1.innerHTML = "1. Protest"
-															topic2.innerHTML = "2. Religion"
-															topic3.innerHTML = "3. Noise"
-															topic4.innerHTML = ""
-															topic5.innerHTML = ""
-
 														} else {
 															// WEBLOG
 															description = "Tunisia’s Arabic-language Web Blogs show great interest in Egypt’s Revolution. The largest cluster, Popular Concerns, expresses aspirations of the people, like Freedom, the Woman, likely in reference to Women’s Rights, and mention countries like Saudi Arabia, the asylum country of the ousted Tunisian President, and neighbouring Morocco, where major protests are due to start in February. Worries take a religious tone as God appears among the top relevant terms. The Protests cluster has terms related to events, such as the state of emergency, and Saudi Arabia, and more precisely Jeddah, the Saudi Arabian city where Ben Ali lives in. Surprisingly, Canada is mentioned, perhaps in reference to Belhassen Trabelsi, brother-in-law of the ousted Tunisian President, who sought asylum there after the revolution, but was refused in a 2015 ruling. The Post-Tunisian Revolution Concerns cluster includes bigrams such as Religious Extremism, Leila Trabelsi, wife of the ousted President, and the Central Bank, as anger was directed at her embezzling of public funds. In the Time Series, we indeed notice the Egyptian Protests cluster grows when the Egyptian Revolution starts and diminishes after the Egyptian President’s Resignation. In a similar trend to Egypt’s Arabic-language Social Media, Popular Concerns posts experience a peak right before January 25.";
-
-															topic1.innerHTML = "1. Popular Concerns"
-															topic2.innerHTML = "2. Protests (Tunisia)"
-															topic3.innerHTML = "3. Protests (Egypt)"
-															topic4.innerHTML = "4. Post-Revolution Concerns (Tunisia)"
-															topic5.innerHTML = ""
-
 														}
 
 													} else if (lang == "french"){
 														if (typ == "MAINSTREAM_NEWS") {
 															description = "Popular Concerns name politicians ousted during the revolution, President Ben Ali and Prime Minister Ghannouchi, and voice Tunisian aspirations like Freedom and Democracy. The Presidential Resignation cluster shows a transition with keywords like new, old and regime. It also shows the fears of Tunisians as their ousted President fled the country with stolen money (with keyword corruption), and their aspirations (freedoms and democracy). It is worth noticing that posts about Protests peak around the beginning of the Egyptian Revolution.";
-
-															topic1.innerHTML = "1. Popular Concerns"
-															topic2.innerHTML = "2. Presidential Resignation"
-															topic3.innerHTML = "3. International Reactions"
-															topic4.innerHTML = "4. Protests"
-															topic5.innerHTML = ""
-
-															
 														} else if (typ == "SOCIAL_MEDIA") {
 															description = "The Predicting Revolutions cluster includes keywords like Egypt and Algeria where protests just started, as well as calls to support the protests, talks about repression and media, like France’s Libération newspaper.";
-
-															topic1.innerHTML = "1. Protests"
-															topic2.innerHTML = "2. Predicting Revolutions"
-															topic3.innerHTML = "3. Presidential Resignation"
-															topic4.innerHTML = ""
-															topic5.innerHTML = ""
-
 														} else if (typ == "FORUM") {
 															description = "The forum contain a lot of noise, with keywords such as life, question and job. The Protests cluster is mainly about Tunisia.";
-
-															topic1.innerHTML = "1. Noise"
-															topic2.innerHTML = "2. Protests"
-															topic3.innerHTML = ""
-															topic4.innerHTML = ""
-															topic5.innerHTML = ""
-
-
 														} else {
 															// WEBLOG
 															description = "Popular Concerns voiced in Tunisia’s French-language Web Blogs reveal major demands of the protests like Freedom and Democracy, and of course the downfall of the Regime. Here, international reactions highlight France’s close relationship with former colony Tunisia. They peak as France reacts to the Tunisian Presidential Resignation.";
-
-															topic1.innerHTML = "1. Popular Concerns"
-															topic2.innerHTML = "2. International Reactions"
-															topic3.innerHTML = "3. Protests"
-															topic4.innerHTML = ""
-															topic5.innerHTML = ""
-
 														}
 
 													} else {
 														//English
 														if (typ == "MAINSTREAM_NEWS") {
 															description = "By analysing the most relevant words from the Concern’s topic, we can get a better insight into the concerns and demands showed by Tunisian people, such as “freedom”, “security”, “political”, “economic”, etc. The Tunisian protests are represented as a topic as well. Note that such protest had been less influent  before the Tunisian’s president resignation. “Unrest” and “demands” of people are some of the traces that explain this topic.";
-
-															topic1.innerHTML = "1. Concerns"
-															topic2.innerHTML = "2. Noise"
-															topic3.innerHTML = "3. Protests"
-															topic4.innerHTML = "4. Other News"
-															topic5.innerHTML = ""
-
 														} else if (typ == "SOCIAL_MEDIA") {
 															description = "We verify a strong influence of the domino effect by analysing the most relevant words for the this topic. Egyptian protestors and its president are referred several times. The international reactions to such events are expressed in the topic « International Reactions » Countries such as United States and Obama are highlighted, which is comprehensible, due to Obama’s and Merkel’s active opinion intervention on the subject. ";
-
-															topic1.innerHTML = "1. Domino Effect"
-															topic2.innerHTML = "2. International Reactions"
-															topic3.innerHTML = "3. Noise"
-															topic4.innerHTML = "4. Domino Effect"
-															topic5.innerHTML = ""
-
 														} else if (typ == "FORUM") {
 															description = "The content collected from FORUM is more diverse than the other sources of information- Therefore, topics tend not to be so specifically related with the Arab spring as the remaining ones. The international reactions reveal to be concerned with “bankruptcy”, “economy state”, “government”, etc. The topic related with protests represent a wide range of fields, from concerns of people in Tunisia, such as security, law, etc.";
-
-															topic1.innerHTML = "1. Noise"
-															topic2.innerHTML = "2. International Reactions"
-															topic3.innerHTML = "3. Protests"
-															topic4.innerHTML = ""
-															topic5.innerHTML = ""
-
 														} else {
 															// WEBLOG
 															description = "International Reactions to this events are described in one of the topics. We observe the main means of communication (media, news, internet, etc) during the spread of this information world wide. In a similar way to Egypt, this English-language data provides an outsider’s view to the events. Moreover, we see how the events going on in Egypt are spread in Tunisian weblogs.  We collect very interesting information about how social movements in the MENA Region are interconnected, with countries like Israel, Egypt, Iran, Lebanon, Yemen and movements like Hezbollah surfacing as top keywords in the MENA Region Topic. Moreover, in topic “Post-Revolution” we get a sense of the post-Tunisian revolution era, described by keywords like Interim (Interim President), Coalition, Unrest, Fragile, and a big emphasis on Power, Friday and Protests.";
-
-															topic1.innerHTML = "1. International Reactions"
-															topic2.innerHTML = "2. MENA Region"
-															topic3.innerHTML = "3. Post-Revolution"
-															topic4.innerHTML = "4. Economic News"
-															topic5.innerHTML = ""
-
 														}
 													}
 
@@ -572,23 +375,12 @@
 
 												</script>
 									</tbody>
+								</table>
 
-							</table>
 
-							<div id="menu-outer" style="position: relative; right: 220px; top:-70px; width: 1200px; height: 10px;">
-								  <div class="table">
-								    <ul id="horizontal-list">
-								      <li id = "topic1" style="color:rgb(207, 232, 252);font-size:14px; font-weight: 800; text-shadow: 2px 2px 5px red;">1. Popular Concerns</li>
-								      <li id = "topic2" style="color:rgb(207, 232, 252);font-size:14px; font-weight: 800; margin-left: 25px; text-shadow: 2px 2px 5px red;">2. Domino Effect</li>
-								      <li id = "topic3" style="color:rgb(207, 232, 252);font-size:14px; font-weight: 800; margin-left: 25px; text-shadow: 2px 2px 5px red;>3. Citizen Journalism</li>
-								      <li id = "topic4" style="color:rgb(207, 232, 252);font-size:14px; font-weight: 800; margin-left: 25px; text-shadow: 2px 2px 5px red;">4. Protests</li>
-								      <li id = "topic5" style="color:rgb(207, 232, 252);font-size:14px; font-weight: 800; margin-left: 25px; text-shadow: 2px 2px 5px red;">5. Live Information</li>
-								    </ul>
-								  </div>
-							</div>
 
 							<div>
-								<iframe width="1200" height="768" id="myIframe" src="https://khalilmrini.github.io/Private-ADA/Project/pyLDAvis/Egypt_SOCIAL_MEDIA_arabic.html" scrolling="no" style="position:relative; top: -115px; left: -10px;-webkit-transform:scale(0.7) translate(-300px,-50px); background-color: rgba(232, 232, 232, .9);"> TEST </iframe>
+								<iframe width="1200" height="768" id="myIframe" src="https://khalilmrini.github.io/Private-ADA/Project/pyLDAvis/Egypt_SOCIAL_MEDIA_arabic.html" scrolling="no" style="position:relative; top: -120px; left: -10px;-webkit-transform:scale(0.7) translate(-300px,-50px); background-color: rgba(232, 232, 232, .9);"> TEST </iframe>
 							</div>
 
 							<div style="position:relative; top: -810px; left: 820px; background-color: rgba(255, 255, 255, 0); width: 350px; height: 500px">
