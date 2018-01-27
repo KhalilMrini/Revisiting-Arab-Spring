@@ -7,13 +7,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 
-		<SCRIPT TYPE="text/javascript"> 
-			function popup(mylink, windowname) { 
-				if (! window.focus)return true; 
-				var href; if (typeof(mylink) == 'string') href=mylink; 
-				else href=mylink.href; 
-				window.open(href, windowname, 'width=1300,height=1000,scrollbars=yes,fullscreen=yes, menubar=no, status=no, titlebar=no'); 
-				return false; } 
+		<SCRIPT TYPE="text/javascript">
+			function popup(mylink, windowname) {
+				if (! window.focus)return true;
+				var href; if (typeof(mylink) == 'string') href=mylink;
+				else href=mylink.href;
+				window.open(href, windowname, 'width=1300,height=1000,scrollbars=yes,fullscreen=yes, menubar=no, status=no, titlebar=no');
+				return false; }
 		</SCRIPT>
 
 		<style>
@@ -24,20 +24,20 @@
 
 			/* Track */
 			::-webkit-scrollbar-track {
-			    box-shadow: inset 0 0 5px grey; 
+			    box-shadow: inset 0 0 5px grey;
 			    border-radius: 10px;
 			    background: rgba(255,255,255,0)
 			}
-			 
+
 			/* Handle */
 			::-webkit-scrollbar-thumb {
-			    background: rgba(191, 0, 22, 0.5); 
+			    background: rgba(191, 0, 22, 0.5);
 			    border-radius: 10px;
 			}
 
 			/* Handle on hover */
 			::-webkit-scrollbar-thumb:hover {
-			    background: rgba(163, 158, 158, 0.3); 
+			    background: rgba(163, 158, 158, 0.3);
 			}
 
 			/* Horizontal menu */
@@ -60,7 +60,7 @@
 					display: inline;
 				}
 		</style>
-		
+
 	</head>
 	<body>
 
@@ -93,7 +93,7 @@
 					<body>
 						<!--Introduction-->
 
-						
+
 					</body>
 				</div>
 
@@ -106,12 +106,12 @@
 				<div class="inner" style="transform: scale(.90)">
 					<article class="box">
 						<header>
-							<h3>7 years on, revisiting the demands of the Tunisian and Egyptian springs</h3>
+							<h3>Introduction</h3>
 							<p>Applied Data Analysis Project</p>
 						</header>
 						<div class="content" >
 							<p>
-								In the 2011 Arab Spring, the two most significant revolutions happened in Tunisia and Egypt. 7 years later, we aim to revisit the most recurrent demands expressed by the people on social media. Instead of fishing for pre-defined topics or keywords, we want to let the data directly reflect popular concerns. Here, we want to tell the story of the people behind the revolutions from their own perspective. The motivation behind this project is to bring you closer to the story to understand what drove Tunisians and Egyptians to the streets. With this purpose on mind, we will take a meticulous look into the their expressed demands and concerns. Furthermore, we will analyse how they relate to each other. 
+								In the 2011 Arab Spring, the two most significant revolutions happened in Tunisia and Egypt. 7 years later, we aim to revisit the most recurrent demands expressed by the people on social media. Instead of fishing for pre-defined topics or keywords, we want to let the data directly reflect popular concerns. Here, we want to tell the story of the people behind the revolutions from their own perspective. The motivation behind this project is to bring you closer to the story to understand what drove Tunisians and Egyptians to the streets. With this purpose on mind, we will take a meticulous look into the their expressed demands and concerns. Furthermore, we will analyse how they relate to each other.
 							</p>
 							<p>
 								The dataset used extends from January 13th to February 14th 2011, roughly covering the time period in between the Tunisian presidential resignation and the Egyptian one. With this analysis, we will take a look into how one uprising led to the second. We will will see how the Tunisian revolution bring about the Egyptian one. To accomplish this, we will dive deeper into the data, by studying people’s behaviour in Social Media, as well as the taking a careful look into the News and Web Blogs we have at our disposal.
@@ -138,12 +138,12 @@
 				<div class="inner" style="transform: scale(.92)">
 					<article class="box">
 						<header>
-							<h3>7 years on, revisiting the demands of the Tunisian and Egyptian springs</h3>
+							<h3>Dataset</h3>
 							<p>Applied Data Analysis Project</p>
 						</header>
 						<div class="content" >
 							<p>
-								The dataset we used in this work is the <b>ICWSM 2011 <i><a href="dataset.html"">Spinn3r</a></i> dataset </b>.  This is a huge size dataset (~3TB), and contains much information that is not of interest to our analysis. Therefore, the definition of a robust filtering function to collect meaningful data for our analysis is of extreme importance. With the purpose of filtering the data in an unbiased way, we use keyphrases to filter this data based on the Tunisian and Egyptian revolutions topics. This way, we are not imposing any bias from the beginning, since any file is considered, as long as it is related with the thematic we are working on. Using Wikipedia articles for the Tunisian and Egyptian revolutions, we automatically extract the keyphrases that will be used for filtering. 
+								The dataset we used in this work is the <b>ICWSM 2011 <i><a href="dataset.html"">Spinn3r</a></i> dataset </b>.  This is a huge size dataset (~3TB), and contains much information that is not of interest to our analysis. Therefore, the definition of a robust filtering function to collect meaningful data for our analysis is of extreme importance. With the purpose of filtering the data in an unbiased way, we use keyphrases to filter this data based on the Tunisian and Egyptian revolutions topics. This way, we are not imposing any bias from the beginning, since any file is considered, as long as it is related with the thematic we are working on. Using Wikipedia articles for the Tunisian and Egyptian revolutions, we automatically extract the keyphrases that will be used for filtering.
 							</p>
 							<p>
 								A good insight is provided by evaluating data not only in English, but in two additional languages: French, Tunisia's colonial-era and second most popular language, and Arabic, the native language of both the peoples of Tunisia and Egypt. Such analysis will enable the obstervation interesting particularities, depending on which language the informations is inferred from.
@@ -183,7 +183,7 @@
 								<img src="images/plots/tunisia_tml.png" alt="">
 							</span>
 						</div>
-						<!-- 
+						<!--
 						<footer>
 							<a href="map_info.html" class="button alt fit">Learn More</a>
 						</footer>
@@ -222,7 +222,7 @@
 			<section id="five" class="wrapper post bg-img" data-bg="banner5.jpg">
 				<div class="inner">
 					<article class="box" >
-						
+
 					</article>
 				</div>
 				<a href="#five" class="more">Learn More</a>
@@ -247,33 +247,33 @@
 									<tbody>
 										<tr>
 											<td>
-												<select id="country" class="lda"> 
+												<select id="country" class="lda">
 														<option value="Egypt">Egypt</option>
-														<option value="Tunisia">Tunisia</option> 
+														<option value="Tunisia">Tunisia</option>
 													</select>
 											</td>
 
 											<td>
-												<select id="language" class="lda">	
-														<option value="arabic">Arabic</option> 
-														<option value="english">English</option> 
-														<option value="french">French</option> 
+												<select id="language" class="lda">
+														<option value="arabic">Arabic</option>
+														<option value="english">English</option>
+														<option value="french">French</option>
 													</select>
 											</td>
 
 											<td>
-												<select id="type" class="lda"> 
-														<option value="SOCIAL_MEDIA">Social Media</option> 
-														<option value="MAINSTREAM_NEWS">Mainstream News</option> 
-														<option value="WEBLOG">Web Blog</option> 
-														<option value="FORUM">Forum</option> 
+												<select id="type" class="lda">
+														<option value="SOCIAL_MEDIA">Social Media</option>
+														<option value="MAINSTREAM_NEWS">Mainstream News</option>
+														<option value="WEBLOG">Web Blog</option>
+														<option value="FORUM">Forum</option>
 													</select>
 											</td>
 
 											<td>
-												<select id="viz" class="lda"> 
+												<select id="viz" class="lda">
 														<option value="html">Topic Detection</option>
-														<option value="jpg">Time Series</option> 
+														<option value="jpg">Time Series</option>
 													</select>
 											</td>
 
@@ -288,31 +288,31 @@
 												var language = document.getElementById('language');
 												var type = document.getElementById('type');
 												var viz = document.getElementById('viz');
-												
+
 												var count = country.options[country.selectedIndex].value;
 												var lang = language.options[language.selectedIndex].value;
 												var typ = type.options[type.selectedIndex].value;
 												var vizz = viz.options[viz.selectedIndex].value;
 
 												var viz_description = document.getElementById('viz_description');
-												
+
 												var theUrl = count.concat(' ', lang, ' ', type);
 												var baseUrl = "https://khalilmrini.github.io/Private-ADA/Project/pyLDAvis/COUNTRY_TYPE_LANGUAGE.VISUALIZATION";
 												var theUrl = baseUrl.replace("VISUALIZATION", vizz).replace("COUNTRY", count).replace("TYPE", typ).replace("LANGUAGE", lang);
 
 
-												var topic1 = document.getElementById('topic1'); 
+												var topic1 = document.getElementById('topic1');
 												var topic2 = document.getElementById('topic2');
-												var topic3 = document.getElementById('topic3'); 
-												var topic4 = document.getElementById('topic4'); 
-												var topic5 = document.getElementById('topic5'); 
+												var topic3 = document.getElementById('topic3');
+												var topic4 = document.getElementById('topic4');
+												var topic5 = document.getElementById('topic5');
 
 
 												//description switch cases
 												var final_description = '<ul  style="color: white; text-align: justify; font-size: 11px"><span style="color:red;font-size:11px; font-weight: 1000"></span> <p style="color:red;font-size:14px; font-weight: 1200">Common Topics</p> <li><span style="color:red;font-size:11px; font-weight: 1000">The Domino Effect:</span> how Tunisia’s Revolution brought about the Egyptian one, references both countries.</li> <li><span style="color:red;font-size:11px; font-weight: 1000">Religion:</span> the Egyptian protests reached their maximum after Friday prayers.</li> <li><span style="color:red;font-size:11px; font-weight: 1000">Presidential Resignation:</span> the vocabulary includes names of politicians and names of countries related to the events.</li> <li><span style="color:red;font-size:11px; font-weight: 1000">Popular Concerns:</span>this topic expresses demands including democracy, or concerns such as poverty and corruption.</li> <li><span style="color:red;font-size:11px; font-weight: 1000">Noise:</span> outliers not providing relevant information.</li> <li><span style="color:red;font-size:11px; font-weight: 1000">Protests:</span> mentions activities around the revolution. <br>  <li><span style="color:red;font-size:11px; font-weight: 1000">International Reactions:</span> it mentions countries outside the MENA region reacting to the Arab Spring.</li>  </ul> <div style="color: white; text-align: justify;font-weight: 550; font-size: 12px; position:relative; height:200px ;overflow-y: scroll;  padding-right:15px;"><span style="color:red;font-size:14px; font-weight: 1200"> Analysis : </span>HERE</div>';
 
 												var description = "";
-												
+
 												if (count == "Egypt") {
 													if (lang == "arabic") {
 														if (typ == "MAINSTREAM_NEWS") {
@@ -433,7 +433,7 @@
 															topic5.innerHTML = ""
 
 														}
-														
+
 													}
 
 												// Tunisia
@@ -488,7 +488,7 @@
 															topic4.innerHTML = "4. Protests"
 															topic5.innerHTML = ""
 
-															
+
 														} else if (typ == "SOCIAL_MEDIA") {
 															description = "The Predicting Revolutions cluster includes keywords like Egypt and Algeria where protests just started, as well as calls to support the protests, talks about repression and media, like France’s Libération newspaper.";
 
@@ -565,7 +565,7 @@
 												}
 
 												viz_description.innerHTML = final_description.replace("HERE", description);
-												
+
 												var theIframe = document.getElementById('myIframe');
 												theIframe.src = theUrl;
 												}
@@ -601,8 +601,8 @@
 										<li><span style="color:red;font-size:11px; font-weight: 1000">Presidential Resignation:</span> the vocabulary includes names of politicians and names of countries related to the events.</li>
 										<li><span style="color:red;font-size:11px; font-weight: 1000">Popular Concerns:</span>this topic expresses demands including democracy, or concerns such as poverty and corruption.</li>
 										<li><span style="color:red;font-size:11px; font-weight: 1000">Noise:</span> outliers not providing relevant information.</li>
-										<li><span style="color:red;font-size:11px; font-weight: 1000">Protests:</span> mentions activities around the revolution. <br> 
-										<li><span style="color:red;font-size:11px; font-weight: 1000">International Reactions:</span> it mentions countries outside the MENA region reacting to the Arab Spring.</li> 
+										<li><span style="color:red;font-size:11px; font-weight: 1000">Protests:</span> mentions activities around the revolution. <br>
+										<li><span style="color:red;font-size:11px; font-weight: 1000">International Reactions:</span> it mentions countries outside the MENA region reacting to the Arab Spring.</li>
 									</ul>
 
 									<div style="color: white; text-align: justify;font-weight: 550; font-size: 12px; position:relative; height:200px ;overflow-y: scroll; padding-right:15px;">
