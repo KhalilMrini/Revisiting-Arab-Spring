@@ -1,3 +1,0 @@
-#!/bin/bash
-
-nohup spark-submit --master yarn --executor-memory 2G --executor-cores 5 --num-executors 4 $1 2> logs/spar_output.log 1> logs/script_output.log read_json.py &

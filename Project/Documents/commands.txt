@@ -1,9 +1,0 @@
-sshfs mrini@iccluster060.iccluster.epfl.ch:/ ./Desktop/Mount/ -ovolname=NAME
-ssh mrini@iccluster060.iccluster.epfl.ch
-scp mrini@iccluster060.iccluster.epfl.ch:/buffer/mrini/data.pkl ./data.pkl
-hadoop fs -ls /datasets/Spinn3r/
-hadoop fs -get /datasets/Spinn3r/icwsm2011/02-11-OTHER.tar.gz ./
-scp mrini@iccluster060.iccluster.epfl.ch:/datasets/Spinn3r/icwsm2011/02-11-OTHER.tar.gz ./02-11-OTHER.tar.gz
-hadoop fs -get /datasets/Spinn3r/icwsm2011/02-11-OTHER.tar.gz /Users/Khalil/
-ssh mrini@iccluster060.iccluster.epfl.ch "hadoop fs -get /datasets/Spinn3r/icwsm2011/02-11-WEBLOG.tar.gz ./"
-nohup spark-submit --master yarn --executor-memory 30G --executor-cores 5 --num-executors 4 $1 2> /buffer/mrini/spar_output.log 1> /buffer/mrini/script_output.log read_json.py &
