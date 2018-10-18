@@ -1,14 +1,4 @@
-04 - Applied ML/\.ipynb_checkpoints/
-Project/.ipynb_checkpoints/
-Project/01-14-SOCIAL_MEDIA.tar.gz
-Project/Project-Copy1.ipynb
-
-Project/cluster_data/\.DS_Store
-
-\.DS_Store
-Project/DW_scraping.ipynb
-Project/Website/progress.js
-Project/Website/progress.html
+.ipynb_checkpoints
+.gitignore
 *.pkl
-Project/bigrams_dataframes/Untitled.ipynb
-Project/Website.rar
+*.DS_Store
