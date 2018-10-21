@@ -1,6 +1,6 @@
 # 7 Years On, Revisiting The Demands of The Tunisian and Egyptian Springs
 
-**Authors:** [Simão Moraes Sarmento](https://github.com/simaomsarmento), [Khalil Mrini](khalilmrini.github.io), [Khalid Omari](https://github.com/khalidomari)
+**Authors:** [Simão Moraes Sarmento](https://github.com/simaomsarmento), [Khalil Mrini](https://khalilmrini.github.io), [Khalid Omari](https://github.com/khalidomari)
 
 [**Click here for our Project Website!**](https://khalilmrini.github.io/Revisiting-Arab-Spring/Website/)
 
